@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+    <link rel="stylesheet" href="css/onsen/material-design-iconic-font/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="css/onsen/onsen-css-components.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link  href="css/onsen/onsenui.min.css" rel="stylesheet" type="text/css">
+    <title>KANTAUR</title>
+    <!-- <script type="text/javascript" src="cordova.js"></script> -->
+    <script type="text/javascript" charset="utf-8" src="js/onsenui.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        // app.initialize();
+        window.fn = {};
+        window.fn.open = function() {
+            var menu = document.getElementById('menu');
+            menu.open();
+        };
+        window.fn.load = function(page) {
+
+            var content = document.getElementById('content');
+            var menu = document.getElementById('menu');
+            content.load(page)
+                .then(
+                    menu.close.bind(menu)
+                );
+
+
+        };
+
+    </script>
+</head>
+
+<body class="app">
+<ons-splitter>
+
+    <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
+
+        <ons-page id="home">
+
+            <ons-list>
+
+                <ons-list-item onclick="fn.load('home.html')" tappable>
+
+                    Kantaur
+
+                </ons-list-item>
+                <ons-list-item onclick="fn.load('entziklopedia.html')" tappable>
+
+                    Entziklopedia
+
+                </ons-list-item>
+
+                <ons-list-item onclick="fn.load('hondakinak.html')" tappable>
+                    Hondakinak
+
+                </ons-list-item>
+
+                <ons-list-item onclick="fn.load('configuracion.html')" tappable>
+
+                    Configuración
+
+                </ons-list-item>
+
+            </ons-list>
+
+        </ons-page>
+
+    </ons-splitter-side>
+
+    <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
+
+</ons-splitter>
+
+
+
+<template id="home.html">
+
+    <ons-page>
+
+        <ons-toolbar>
+
+            <div class="left">
+
+                <ons-toolbar-button onclick="fn.open()">
+
+                    <ons-icon icon="md-menu"></ons-icon>
+
+                </ons-toolbar-button>
+
+            </div>
+
+            <div class="center">
+
+
+
+            </div>
+
+        </ons-toolbar>
+
+        <!-- <ons-row align="center">
+             <ons-col class="loading" align="center">
+                 <svg class="progress-circular progress-circular--indeterminate">
+                     <circle class="progress-circular__background"/>
+                     <circle class="progress-circular__primary progress-circular--indeterminate__primary"/>
+                     <circle class="progress-circular__secondary progress-circular--indeterminate__secondary"/>
+                 </svg>
+             </ons-col>
+         </ons-row>-->
+        <div id="main-menu" class="page__content ons-page-inner">
+
+            <div class="titulo">
+                <img class="img-responsive " src="img/logo.png">
+            </div>
+            <ons-row >
+                <ons-col  onclick="fn.load('entziklopedia.html')"  align="center">
+                    <div class="content-imagen">
+                        <img class="img-responsive img-circle" src="img/redondo.png">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    Entziklopedia
+                </ons-col>
+                <ons-col onclick="fn.load('aholkuak.html')" align="center">
+                    <div class="content-imagen">
+                        <img class="img-responsive img-circle" src="img/redondo.png">
+                        <i class="far fa-comment-alt"></i>
+                    </div>
+                    Aholkuak
+                </ons-col>
+            </ons-row>
+            <ons-row >
+                <ons-col onclick="fn.load('hondakinak.html')" align="center">
+                    <div class="content-imagen">
+                        <img class="img-responsive img-circle" src="img/redondo.png">
+                        <i class="fas fa-trash-alt"></i>
+                    </div>
+                    Hondakinak
+                </ons-col>
+                <ons-col onclick="fn.load('kantrivia.html')" align="center">
+                    <div class="content-imagen">
+                        <img class="img-responsive img-circle" src="img/redondo.png">
+                        <i class="fab fa-yelp"></i>
+                    </div>
+                    KanTrivia
+                </ons-col>
+            </ons-row>
+        </div>
+
+
+
+
+    </ons-page>
+
+</template>
+
+
+
+<template id="detalle.html">
+
+    <ons-page>
+
+        <ons-toolbar>
+
+            <div class="left">
+
+                <ons-toolbar-button onclick="fn.open()">
+
+                    <ons-icon icon="md-menu"></ons-icon>
+
+                </ons-toolbar-button>
+
+            </div>
+
+        </ons-toolbar>
+        <div id="main-enciclopedia-detalle" class="page__content ons-page-inner">
+            <div class="titulo">
+                <h1><i class="fas fa-book-open"></i> ENTZIKLOPEDIA</h1>
+            </div>
+            <div class="content-listado">
+                <div class="content-content text-center">
+                    <h2><i class="fas fa-chevron-left left back "></i>Pulpo<i class="fas fa-chevron-right right next"></i></h2>
+                    <h3>nombre científico</h3>
+                    <div class="imagen">
+                        <img class="img-responsive central" src="img/borrar.png">
+                    </div>
+                    <div class="textos">
+                        <p>Ur gaziko arrai erdikoipetsua. Arroka hondoetan aurkitzen dira, 120 m araberako sakontasunean. Normalean talde txikiak osatzen dituzte, baino barkarka ikusten ohi dira ere. </p>
+                        <ons-row align="center">
+                            <ons-col>
+                                <div class="left">
+                                    This its right.
+                                </div>
+                            </ons-col>
+                            <ons-col>
+                                <div class="right">
+                                    Lorem aliqua.
+                                </div>
+                            </ons-col>
+                        </ons-row>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </ons-page>
+
+</template>
+
+<template id="entziklopedia.html">
+
+    <ons-page>
+
+
+        <ons-toolbar>
+
+            <div class="left">
+
+                <ons-toolbar-button onclick="fn.open()">
+
+                    <ons-icon icon="md-menu"></ons-icon>
+
+                </ons-toolbar-button>
+
+            </div>
+
+        </ons-toolbar>
+        <div id="main-enciclopedia" class="page__content ons-page-inner">
+            <div class="titulo">
+                <h1><i class="fas fa-book-open"></i> ENTZIKLOPEDIA </h1>
+            </div>
+            <div class="content-listado">
+                <div class="content-content">
+                    <div class="content-select">
+                        <ons-select id="choose-sel" >
+                            <i class="fas fa-caret-down"></i>
+                            <select class=" gfg ">
+                                <option value="basic">Espezie guztiak</option>
+                                <option value="material">espècie 1</option>
+                                <option value="underbar">Underbar</option>
+                            </select>
+                        </ons-select>
+                    </div>
+                    <ons-row >
+                        <ons-col onclick="fn.load('detalle.html')" id="urlcute" align="center">
+                            <div class="imagen">
+                                <img class="img-responsive " src="img/listado-fondo.png">
+                                <img class="img-responsive central" src="img/borrar.png">
+                            </div>
+
+                            <h2>Olagarroa</h2>
+                            <h3>Octupus vulgaris</h3>
+
+                        </ons-col>
+                        <ons-col onclick="fn.load('detalle.html')" id="urlcute" align="center">
+                            <div class="imagen">
+                                <img class="img-responsive " src="img/listado-fondo.png">
+                                <img class="img-responsive central" src="img/borrar.png">
+                            </div>
+                            <h2>Olagarroa</h2>
+                            <h3>Octupus vulgaris</h3>
+                        </ons-col>
+                    </ons-row>
+                </div>
+
+            </div>
+        </div>
+
+    </ons-page>
+
+</template>
+<template id="aholkuak.html">
+
+    <ons-page>
+
+
+        <ons-toolbar>
+
+            <div class="left">
+
+                <ons-toolbar-button onclick="fn.open()">
+
+                    <ons-icon icon="md-menu"></ons-icon>
+
+                </ons-toolbar-button>
+
+            </div>
+
+        </ons-toolbar>
+        <div id="main-aholkuak" class="page__content ons-page-inner">
+            <div class="titulo">
+                <h1><i class="far fa-comment-alt"></i> AHOLKUAK </h1>
+            </div>
+            <div class="lista">
+                <div class="content-content">
+
+                    <ons-row >
+                        <ons-col class="left" onclick="fn.load('detalle.html')" id="urlcute" align="center">
+                            <div class="imagen">
+                                <img class="img-responsive " src="img/borrar.png">
+                            </div>
+
+                        </ons-col>
+                        <ons-col class="texto">
+                            <p>texto</p>
+                        </ons-col>
+
+                    </ons-row>
+                    <ons-row>
+                        <ons-col class="left" onclick="fn.load('detalle.html')" id="urlcute" align="center">
+                            <div class="imagen">
+                                <img class="img-responsive " src="img/borrar.png">
+                            </div>
+
+                        </ons-col>
+                        <ons-col class="texto">
+                            <p>texto</p>
+                        </ons-col>
+                    </ons-row>
+                </div>
+
+            </div>
+        </div>
+
+    </ons-page>
+
+</template>
+
+
+<template id="hondakinak.html">
+
+    <ons-page>
+
+        <ons-toolbar>
+
+            <div class="left">
+
+                <ons-toolbar-button onclick="fn.open()">
+
+                    <ons-icon icon="md-menu"></ons-icon>
+
+                </ons-toolbar-button>
+
+            </div>
+
+
+
+        </ons-toolbar>
+
+
+
+        <div id="main-hondakinak" class="page__content ons-page-inner">
+            <div class="titulo">
+                <h1>  <i class="fas fa-trash-alt"></i> HONDAKINAK </h1>
+            </div>
+            <h3 class="text-center">Itsaso ekos</h3>
+            <div class="imagen">
+                <img class="img-responsive " src="img/borrar.png">
+            </div>
+
+            <div class="textos">
+                <p>
+                    texto de pruebas
+                </p>
+                <ol>
+                    <li><strong>Pilak</strong>: lition ,,,</li>
+                    <li><strong>Pilak</strong>: lition ,,,</li>
+                </ol>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+    </ons-page>
+
+</template>
+
+
+
+
+
+<template id="kantrivia.html">
+
+    <ons-page>
+        <ons-toolbar>
+            <div class="left">
+
+                <ons-toolbar-button onclick="fn.open()">
+
+                    <ons-icon icon="md-menu"></ons-icon>
+
+                </ons-toolbar-button>
+            </div>
+        </ons-toolbar>
+        <div id="main-kantrivia" class="page__content ons-page-inner">
+            <div class="titulo">
+                <h1><i class="fab fa-yelp"></i> KANTRIVIA <h1>
+            </div>
+            <div class="pregunta marco">
+                <div class="pregunta-content">
+                    <div class="content text-center">
+                        <i class="fas fa-map-marker mark"><span>a</span></i>
+                        ¿Zenbat Haitzetako barbarina ale daude Kantauri Itsasoan?
+                    </div>
+                </div>
+            </div>
+
+            <div class="respuestas">
+                <ons-row>
+                    <ons-col   align="center">
+                        <div class="respuesta marco" onclick="fn.load('resultado.html')">
+                            <div class="respuesta-content">
+                                <div class="content text-center">
+                                    <i class="fas fa-map-marker mark"><span>a</span></i>
+                                    ¿Zenbat Haitzetako barbarina ale daude Kantauri Itsasoan?
+                                </div>
+                            </div>
+                        </div>
+                    </ons-col>
+                    <ons-col >
+                        <div class="respuesta marco">
+                            <div class="respuesta-content">
+                                <div class="content text-center">
+                                    <i class="fas fa-map-marker mark"><span>a</span></i>
+                                    ¿Zenbat Haitzetako barbarina ale daude Kantauri Itsasoan?
+                                </div>
+                            </div>
+                        </div>
+                    </ons-col>
+                </ons-row>
+                <ons-row>
+                    <ons-col   align="center">
+                        <div class="respuesta marco">
+                            <div class="respuesta-content">
+                                <div class="content text-center">
+                                    <i class="fas fa-map-marker mark"><span>a</span></i>
+                                    ¿Zenbat Haitzetako barbarina ale daude Kantauri Itsasoan?
+                                </div>
+                            </div>
+                        </div>
+                    </ons-col>
+                    <ons-col >
+                        <div class="respuesta marco">
+                            <div class="respuesta-content">
+                                <div class="content text-center">
+                                    <i class="fas fa-map-marker mark"><span>a</span></i>
+                                    ¿Zenbat Haitzetako barbarina ale daude Kantauri Itsasoan?
+                                </div>
+                            </div>
+                        </div>
+                    </ons-col>
+                </ons-row>
+            </div>
+        </div>
+
+    </ons-page>
+
+</template>
+<template id="resultado.html">
+
+    <ons-page>
+        <ons-toolbar>
+            <div class="left">
+
+                <ons-toolbar-button onclick="fn.open()">
+
+                    <ons-icon icon="md-menu"></ons-icon>
+
+                </ons-toolbar-button>
+            </div>
+        </ons-toolbar>
+        <div id="main-resultado" class="page__content ons-page-inner">
+            <div class="titulo">
+                <h1><i class="fab fa-yelp"></i> KANTRIVIA</h1>
+            </div>
+            <div class="total btn text-center">
+                <i class="fas fa-thumbs-up"></i> BIKAIN!
+                <ons-row></ons-row>
+                <span>Zure emaitza: <strong>10</strong></span>
+            </div>
+            <div class="puntos">
+                <ons-row>
+                    <ons-col class="text-center">
+                        <div class="puntos_1 mini-bloque">
+                            <div class="imagen mini-bloque">
+                                <img class="img-responsive soporte img-circle" src="../img/imagen-soporte.png" />
+                                <span class="numero">27</span>
+                            </div>
+                        </div>
+                        <span class="label-titular" >Jolastutako partidak</span>
+                    </ons-col>
+                    <ons-col class="text-center" >
+                        <div class="puntos_2 mini-bloque">
+                            <div class="imagen mini-bloque">
+                                <img class="img-responsive soporte img-circle" src="../img/imagen-soporte.png" />
+                                <span class="numero">10</span>
+                            </div>
+                        </div>
+                        <span class="label-titular" >Puntuazio hoberena</span>
+                    </ons-col>
+                    <ons-col class="text-center" >
+                        <div class="puntos_3 mini-bloque">
+                            <div class="imagen mini-bloque">
+                                <img class="img-responsive soporte img-circle" src="../img/imagen-soporte.png" />
+                                <span class="numero">88</span>
+                            </div>
+                        </div>
+                        <span class="label-titular">Ranking generala</span >
+                    </ons-col>
+                </ons-row>
+            </div>
+            <div class="btn berri text-center">
+                <img class="img-responsive" src="../img/volver-jugar.png">
+                <span> Jolastu partida berri bat</span>
+
+            </div>
+
+        </div>
+
+    </ons-page>
+
+</template>
+</body>
+
+</html>
