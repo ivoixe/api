@@ -87,7 +87,16 @@ $(document).ready(function() {
     $( document ).on( 'click','.respuesta.marco', function(e) {
         var res = $(this).attr('res');
         var pre = $(this).attr('pregunta');
+        ons.notification.alert('');
         pregunta(res,pre);
+        var mensaje = last_ans();
+        console.log(mensaje);
+       if(mensaje==true){
+           ons.notification.alert('Emaitza');
+       }else{
+           ons.notification.alert('Hurrengo galdera');
+       }
+
     });
 
 
@@ -190,19 +199,24 @@ function carga_preguntas(){
 }
 function dibuja(){
    /*******************************/
-
+    $(document).find('#preguntasContenido').html('');
     $.ajax({
         url:'js/preguntas.js',
         dataType: "script",
         success: function(resp){
             var contenido="";
             var todas = localStorage.getItem("todas_preguntas");
+            var index = 1;
+            var hidden= '';
             $.each( JSON.parse(todas), function( key, value ) {
-
                 var pregunta_contestada = localStorage.getItem("pregunta"+value.id);
-             //  console.log(pregunta_contestada);
+             //console.log('pregunta contestada'+pregunta_contestada);
+                hidden='';
                if(!pregunta_contestada) {
-                   contenido += ' <div class="pregunta marco">' +
+                    if(index != 1){
+                        hidden='hidden';
+                    }
+                   contenido += ' <div class="pregunta marco '+hidden+'" >' +
                        '                <div class="pregunta-content">' +
                        '                    <div class="content text-center">' +
                        '                        <i class="fas fa-map-marker mark"><span>a</span></i>' +
@@ -210,7 +224,7 @@ function dibuja(){
                        '                    </div>' +
                        '                </div>' +
                        '            </div>' +
-                       '            <div class="respuestas">' +
+                       '            <div class="respuestas '+hidden+'">' +
                        '                <ons-row>' +
                        '                    <ons-col   align="center">' +
                        '                        <div class="respuesta marco"  pregunta="' + value.id + '" res="' + value.preguntas.respuesta1.valor + '"  >' +
@@ -256,11 +270,18 @@ function dibuja(){
                        '                    </ons-col>' +
                        '                </ons-row>' +
                        '            </div>';
+                   index++;
                }
 
             });
             if(contenido){
                 $(document).find('#preguntasContenido').append(contenido);
+
+            }else{
+               var todas_contestadas= comprobar_preguntas();
+               if(todas_contestadas == true){
+                   window.fn.load('resultado.html');
+               }
             }
 
             //**comprobamos si ya ha resuelto todas las preguntas***/
@@ -268,8 +289,8 @@ function dibuja(){
 
 
         },
-        error: function(){
-
+        error: function(e){
+            console.log('error'+e);
         }
     });
    /*******************************/
@@ -277,6 +298,7 @@ function dibuja(){
    // $('#preguntasContenido').append(contenido);
 
 }
+
 function vaciar_juego(){
     var todas = localStorage.getItem("todas_preguntas");
 
@@ -284,7 +306,13 @@ function vaciar_juego(){
         url:'js/preguntas.js',
         dataType: "script",
         success: function(resp){
-
+            var content = document.getElementById('content');
+            var todas = localStorage.getItem("todas_preguntas");
+            $.each( JSON.parse(todas), function( key, value ) {
+               // console.log(localStorage.getItem("pregunta"+value.id));
+                localStorage.removeItem("pregunta"+value.id);
+            });
+            dibuja();
         },
         error: function(){
 
@@ -302,7 +330,7 @@ function comprobar_preguntas(){
 
         var cada = localStorage.getItem("pregunta"+value.id);
 
-        if(cada ||cada != 'undefined'){
+        if(cada ){
             respondidas++;
         }
         todas_cont++;
@@ -310,17 +338,127 @@ function comprobar_preguntas(){
     if(respondidas == todas_cont){
        return true;
     }else{
+        dibuja();
         return false;
     }
+
+}
+function last_ans(){
+    var todas = localStorage.getItem("todas_preguntas");
+    var contador = [];
+    var todas_cont = 0;
+    var respondidas=0;
+    $.each( JSON.parse(todas), function( key, value ) {
+
+        var cada = localStorage.getItem("pregunta"+value.id);
+
+        if(cada ){
+            respondidas++;
+        }
+        todas_cont++;
+    });
+
+    if(respondidas == todas_cont){
+        return true;
+    }else{
+        return false;
+    }
+}
+function datos_resultado(){
+    var todas = localStorage.getItem("todas_preguntas");
+    var malas = 0;
+    var num_partidas = 0;
+    var buenas = 0;
+    var historial =[];
+    var respondidas=0;
+    var todas_count=0;
+    var part = [];
+    var tiempo= new Date().getTime();
+
+    $.each( JSON.parse(todas), function( key, value ) {
+        var cada = localStorage.getItem("pregunta"+value.id);
+
+        if(cada == '"respuesta_correcta"'){
+            buenas ++;
+        }
+        todas_count ++;
+    });
+
+    var res_num= buenas * 10 /todas_count;
+
+    var historial = JSON.parse(localStorage.getItem("partidas"));
+    if(!historial){
+        part.push(res_num);
+        localStorage.setItem('partidas', JSON.stringify(part));
+    }else{
+        /*********vemos las anteriores**********************/
+        var itemsArray = [];
+        var comparacion= 0;
+
+        $.each(historial, function (key, value) {
+            itemsArray.push(value);
+
+        });
+        itemsArray.push(res_num);
+
+        localStorage.setItem('partidas', JSON.stringify(itemsArray));
+
+    }
+    historial = JSON.parse(localStorage.getItem("partidas"));
+    var suma_media= 0;
+    $.each(historial, function (key, value) {
+        if(value > comparacion){
+            comparacion = value;
+            suma_media = suma_media + (value*1);
+        }
+        num_partidas ++;
+    });
+
+    var media = suma_media/num_partidas ;
+    var n = media.toFixed(1);
+    var texto ="";
+    var icono ="";
+    $.ajax({
+        url:'js/preguntas.js',
+        dataType: "script",
+        success: function(resp){
+
+            if(res_num > 7){
+               icono="fa-thumbs-up";
+               texto="BIKAIN!";
+            }
+            if(res_num < 7 && res_num > 4){
+                icono="fa-thumbs-up";
+                texto="LEHENENGO HOBETZEA!";
+            }
+            if(res_num < 5){
+                icono="fa-thumbs-down";
+                texto="Saiatu berriro!";
+            }
+            $('#texto-res').text(texto);
+            $('.total .fas').addClass(icono);
+            $('#resultado_numero').text(res_num);
+            $('#partidas').text(num_partidas);
+            $('#hoberena').text(comparacion);
+            $('#ranking').text(n);
+        },
+        error: function(){
+
+        }
+    });
+
+
 
 }
 function pregunta(res,id_pregunta){
     //ha hecho click en la pregunnta
      var preguntas = [];
       preguntas[id_pregunta] = res;
-
     localStorage.setItem("pregunta"+id_pregunta, JSON.stringify(res));
+    dibuja();
    var  veo = JSON.parse(localStorage.getItem("pregunta"+id_pregunta));
     //console.log(typeof veo); //object
    // console.log(veo); //object
+    var comprobacion = carga_preguntas();
+    return comprobacion;
 }

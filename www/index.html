@@ -66,19 +66,21 @@
             }
             if(page =="kantrivia.html"){
                 var comprobacion = comprobar_preguntas();
+                console.log('compro kan'+comprobacion);
                 if(comprobacion==true){
-                    page="resultado.html";
+                   page="resultado.html";
                 }
             }
             if(page =="resultado.html"){
                 var comprobacion = comprobar_preguntas();
-
+                datos_resultado();
+              //  console.log('compro res'+comprobacion);
                 if(comprobacion == false){
                     page="kantrivia.html";
                 }
-            }
-            var t= dibuja();
-             $(document).find('#preguntasContenido').html(t);
+        }
+           // var t= dibuja();
+            // $(document).find('#preguntasContenido').html(t);
 
             var content = document.getElementById('content');
             var menu = document.getElementById('menu');
@@ -92,16 +94,8 @@
 
         ons.ready(function() {
             $( document ).on( 'click','.berri', function() {
-                var content = document.getElementById('content');
-                var todas = localStorage.getItem("todas_preguntas");
-                 $.each( JSON.parse(todas), function( key, value ) {
-                    console.log(localStorage.getItem("pregunta"+value.id));
-                    localStorage.clear("pregunta"+value.id);
-                });
-                $.each( JSON.parse(todas), function( key, value ) {
-                    console.log(localStorage.getItem("pregunta"+value.id));
-                });
-                dibuja();
+                vaciar_juego();
+
                 content.load('kantrivia.html')
                     .then(
                         menu.close.bind(menu)
@@ -489,10 +483,10 @@
             <div class="titulo">
                 <h1><i class="fab fa-yelp"></i> KANTRIVIA</h1>
             </div>
-            <div class="total btn text-center">
-                <i class="fas fa-thumbs-up"></i> BIKAIN!
+            <div class="total btn text-center" id="resultado-general">
+                <i class="fas "></i> <span id="texto-res"></span>
                 <ons-row></ons-row>
-                <span>Zure emaitza: <strong>10</strong></span>
+                <span>Zure emaitza: <strong  id="resultado_numero"></strong></span>
             </div>
             <div class="puntos">
                 <ons-row>
@@ -500,7 +494,7 @@
                         <div class="puntos_1 mini-bloque">
                             <div class="imagen mini-bloque">
                                 <img class="img-responsive soporte img-circle" src="../img/imagen-soporte.png" />
-                                <span class="numero">27</span>
+                                <span id="partidas" class="numero"></span>
                             </div>
                         </div>
                         <span class="label-titular" >Jolastutako partidak</span>
@@ -509,7 +503,7 @@
                         <div class="puntos_2 mini-bloque">
                             <div class="imagen mini-bloque">
                                 <img class="img-responsive soporte img-circle" src="../img/imagen-soporte.png" />
-                                <span class="numero">10</span>
+                                <span id="hoberena" class="numero"></span>
                             </div>
                         </div>
                         <span class="label-titular" >Puntuazio hoberena</span>
@@ -518,7 +512,7 @@
                         <div class="puntos_3 mini-bloque">
                             <div class="imagen mini-bloque">
                                 <img class="img-responsive soporte img-circle" src="../img/imagen-soporte.png" />
-                                <span class="numero">88</span>
+                                <span id="ranking" class="numero"></span>
                             </div>
                         </div>
                         <span class="label-titular">Ranking generala</span >
@@ -538,4 +532,4 @@
 </template>
 </body>
 
-</html>
+</html>                         
