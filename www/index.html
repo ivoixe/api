@@ -44,8 +44,9 @@
     <link  href="css/onsen/onsenui.min.css" rel="stylesheet" type="text/css">
     <title>KANTAUR</title>
     <!-- <script type="text/javascript" src="cordova.js"></script> -->
-    <script type="text/javascript" charset="utf-8" src="js/onsenui.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/onsenui.min.js"></script>
+
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
         // app.initialize();
@@ -55,6 +56,29 @@
             menu.open();
         };
         window.fn.load = function(page) {
+            categorias();
+
+
+            if(page =="detalle.html"){
+
+                 datas_detalle(null);
+
+            }
+            if(page =="kantrivia.html"){
+                var comprobacion = comprobar_preguntas();
+                if(comprobacion==true){
+                    page="resultado.html";
+                }
+            }
+            if(page =="resultado.html"){
+                var comprobacion = comprobar_preguntas();
+
+                if(comprobacion == false){
+                    page="kantrivia.html";
+                }
+            }
+            var t= dibuja();
+             $(document).find('#preguntasContenido').html(t);
 
             var content = document.getElementById('content');
             var menu = document.getElementById('menu');
@@ -66,13 +90,35 @@
 
         };
 
+        ons.ready(function() {
+            $( document ).on( 'click','.berri', function() {
+                var content = document.getElementById('content');
+                var todas = localStorage.getItem("todas_preguntas");
+                 $.each( JSON.parse(todas), function( key, value ) {
+                    console.log(localStorage.getItem("pregunta"+value.id));
+                    localStorage.clear("pregunta"+value.id);
+                });
+                $.each( JSON.parse(todas), function( key, value ) {
+                    console.log(localStorage.getItem("pregunta"+value.id));
+                });
+                dibuja();
+                content.load('kantrivia.html')
+                    .then(
+                        menu.close.bind(menu)
+                    );
+
+
+            });
+        });
+
+
     </script>
 </head>
 
 <body class="app">
 <ons-splitter>
 
-    <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
+    <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable >
 
         <ons-page id="home">
 
@@ -144,7 +190,7 @@
                      <circle class="progress-circular__secondary progress-circular--indeterminate__secondary"/>
                  </svg>
              </ons-col>
-         </ons-row>-->
+         </ons-row> -->
         <div id="main-menu" class="page__content ons-page-inner">
 
             <div class="titulo">
@@ -216,13 +262,13 @@
             </div>
             <div class="content-listado">
                 <div class="content-content text-center">
-                    <h2><i class="fas fa-chevron-left left back "></i>Pulpo<i class="fas fa-chevron-right right next"></i></h2>
-                    <h3>nombre científico</h3>
+                    <h2><i class="fas fa-chevron-left left back "></i><span></span><i class="fas fa-chevron-right right next"></i></h2>
+                    <h3></h3>
                     <div class="imagen">
-                        <img class="img-responsive central" src="img/borrar.png">
+                        <img class="img-responsive central" src="">
                     </div>
                     <div class="textos">
-                        <p>Ur gaziko arrai erdikoipetsua. Arroka hondoetan aurkitzen dira, 120 m araberako sakontasunean. Normalean talde txikiak osatzen dituzte, baino barkarka ikusten ohi dira ere. </p>
+                       
                         <ons-row align="center">
                             <ons-col>
                                 <div class="left">
@@ -274,31 +320,14 @@
                             <i class="fas fa-caret-down"></i>
                             <select class=" gfg ">
                                 <option value="basic">Espezie guztiak</option>
-                                <option value="material">espècie 1</option>
-                                <option value="underbar">Underbar</option>
+
                             </select>
                         </ons-select>
                     </div>
-                    <ons-row >
-                        <ons-col onclick="fn.load('detalle.html')" id="urlcute" align="center">
-                            <div class="imagen">
-                                <img class="img-responsive " src="img/listado-fondo.png">
-                                <img class="img-responsive central" src="img/borrar.png">
-                            </div>
-
-                            <h2>Olagarroa</h2>
-                            <h3>Octupus vulgaris</h3>
-
-                        </ons-col>
-                        <ons-col onclick="fn.load('detalle.html')" id="urlcute" align="center">
-                            <div class="imagen">
-                                <img class="img-responsive " src="img/listado-fondo.png">
-                                <img class="img-responsive central" src="img/borrar.png">
-                            </div>
-                            <h2>Olagarroa</h2>
-                            <h3>Octupus vulgaris</h3>
-                        </ons-col>
-                    </ons-row>
+                    <div id="list-filtro">
+                   
+                    </div>
+                  
                 </div>
 
             </div>
@@ -409,14 +438,6 @@
 
 
 
-
-
-
-
-
-
-
-
     </ons-page>
 
 </template>
@@ -440,63 +461,12 @@
         </ons-toolbar>
         <div id="main-kantrivia" class="page__content ons-page-inner">
             <div class="titulo">
-                <h1><i class="fab fa-yelp"></i> KANTRIVIA <h1>
+                <h1><i class="fab fa-yelp"></i> KANTRIVIA </h1>
             </div>
-            <div class="pregunta marco">
-                <div class="pregunta-content">
-                    <div class="content text-center">
-                        <i class="fas fa-map-marker mark"><span>a</span></i>
-                        ¿Zenbat Haitzetako barbarina ale daude Kantauri Itsasoan?
-                    </div>
-                </div>
+            <div id="preguntasContenido">
+
             </div>
 
-            <div class="respuestas">
-                <ons-row>
-                    <ons-col   align="center">
-                        <div class="respuesta marco" onclick="fn.load('resultado.html')">
-                            <div class="respuesta-content">
-                                <div class="content text-center">
-                                    <i class="fas fa-map-marker mark"><span>a</span></i>
-                                    ¿Zenbat Haitzetako barbarina ale daude Kantauri Itsasoan?
-                                </div>
-                            </div>
-                        </div>
-                    </ons-col>
-                    <ons-col >
-                        <div class="respuesta marco">
-                            <div class="respuesta-content">
-                                <div class="content text-center">
-                                    <i class="fas fa-map-marker mark"><span>a</span></i>
-                                    ¿Zenbat Haitzetako barbarina ale daude Kantauri Itsasoan?
-                                </div>
-                            </div>
-                        </div>
-                    </ons-col>
-                </ons-row>
-                <ons-row>
-                    <ons-col   align="center">
-                        <div class="respuesta marco">
-                            <div class="respuesta-content">
-                                <div class="content text-center">
-                                    <i class="fas fa-map-marker mark"><span>a</span></i>
-                                    ¿Zenbat Haitzetako barbarina ale daude Kantauri Itsasoan?
-                                </div>
-                            </div>
-                        </div>
-                    </ons-col>
-                    <ons-col >
-                        <div class="respuesta marco">
-                            <div class="respuesta-content">
-                                <div class="content text-center">
-                                    <i class="fas fa-map-marker mark"><span>a</span></i>
-                                    ¿Zenbat Haitzetako barbarina ale daude Kantauri Itsasoan?
-                                </div>
-                            </div>
-                        </div>
-                    </ons-col>
-                </ons-row>
-            </div>
         </div>
 
     </ons-page>

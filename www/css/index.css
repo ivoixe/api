@@ -248,6 +248,7 @@ p,ul li,a,strong,h3,h2{
 .content-listado ons-col{
     text-align: center !important;
     margin-bottom:30px;
+        max-width: 50%;
 }
 .content-listado h2{
     color:#1a191d;
@@ -383,6 +384,7 @@ ons-select i{
     float:right;
     margin-right: 15px;
 }
+
 /******AHOULKUAK********************************/
 #main-aholkuak .content-content{
     background:#fff;
