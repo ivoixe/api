@@ -67,9 +67,11 @@ var app = {
     }
 };
 $(document).ready(function() {
-    carga_preguntas();
-    dibuja();
 
+    carga_preguntas();
+    vaciar_juego();
+    dibuja();
+    localStorage.setItem('jugando',true);
    $( document ).on( 'click','#main-enciclopedia-detalle .next', function() {
        
         datas_detalle('next');
@@ -88,11 +90,13 @@ $(document).ready(function() {
         var res = $(this).attr('res');
         var pre = $(this).attr('pregunta');
         ons.notification.alert('');
+
         pregunta(res,pre);
         var mensaje = last_ans();
-        console.log(mensaje);
+
        if(mensaje==true){
            ons.notification.alert('Emaitza');
+           localStorage.setItem('jugando',false);
        }else{
            ons.notification.alert('Hurrengo galdera');
        }
@@ -201,16 +205,18 @@ function dibuja(){
    /*******************************/
     $(document).find('#preguntasContenido').html('');
     $.ajax({
-        url:'js/preguntas.js',
-        dataType: "script",
+        url:location.href,
+        dataType: "html",
+        type:'GET',
         success: function(resp){
             var contenido="";
             var todas = localStorage.getItem("todas_preguntas");
             var index = 1;
             var hidden= '';
+
             $.each( JSON.parse(todas), function( key, value ) {
                 var pregunta_contestada = localStorage.getItem("pregunta"+value.id);
-             //console.log('pregunta contestada'+pregunta_contestada);
+
                 hidden='';
                if(!pregunta_contestada) {
                     if(index != 1){
@@ -279,8 +285,11 @@ function dibuja(){
 
             }else{
                var todas_contestadas= comprobar_preguntas();
-               if(todas_contestadas == true){
+              var jugando=  localStorage.getItem('jugando');
+               if(todas_contestadas == true ){
                    window.fn.load('resultado.html');
+
+
                }
             }
 
@@ -290,7 +299,10 @@ function dibuja(){
 
         },
         error: function(e){
-            console.log('error'+e);
+
+          //  alert(window.location.pathname);
+           alert('error'+e.status+location.href);
+
         }
     });
    /*******************************/
@@ -303,8 +315,9 @@ function vaciar_juego(){
     var todas = localStorage.getItem("todas_preguntas");
 
     $.ajax({
-        url:'js/preguntas.js',
-        dataType: "script",
+        url:location.href,
+        dataType: "html",
+        type:'GET',
         success: function(resp){
             var content = document.getElementById('content');
             var todas = localStorage.getItem("todas_preguntas");
@@ -312,7 +325,30 @@ function vaciar_juego(){
                // console.log(localStorage.getItem("pregunta"+value.id));
                 localStorage.removeItem("pregunta"+value.id);
             });
-            dibuja();
+           // dibuja();
+        },
+        error: function(){
+
+        }
+    });
+
+
+}
+function vaciar_juego_preguntas(){
+    var todas = localStorage.getItem("todas_preguntas");
+
+    $.ajax({
+        url:location.href,
+        dataType: "html",
+        type:'GET',
+        success: function(resp){
+            var content = document.getElementById('content');
+            var todas = localStorage.getItem("todas_preguntas");
+            $.each( JSON.parse(todas), function( key, value ) {
+                // console.log(localStorage.getItem("pregunta"+value.id));
+                localStorage.removeItem("pregunta"+value.id);
+            });
+            // dibuja();
         },
         error: function(){
 
@@ -336,9 +372,10 @@ function comprobar_preguntas(){
         todas_cont++;
     });
     if(respondidas == todas_cont){
+
        return true;
     }else{
-        dibuja();
+      //  dibuja();
         return false;
     }
 
@@ -419,8 +456,9 @@ function datos_resultado(){
     var texto ="";
     var icono ="";
     $.ajax({
-        url:'js/preguntas.js',
-        dataType: "script",
+        url:location.href,
+        dataType: "html",
+        type:'GET',
         success: function(resp){
 
             if(res_num > 7){
@@ -441,6 +479,7 @@ function datos_resultado(){
             $('#partidas').text(num_partidas);
             $('#hoberena').text(comparacion);
             $('#ranking').text(n);
+            vaciar_juego_preguntas();
         },
         error: function(){
 

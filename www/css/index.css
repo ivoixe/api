@@ -358,8 +358,8 @@ ons-select i{
 }
 /**********ENCICLOPEDIA DETALLE*******************************************/
 #main-enciclopedia-detalle .imagen {
-    padding-top:15px;
-    padding-bottom:15px;
+    padding-top:0px;
+    padding-bottom:0px;
     margin: 0 5px;
     margin-top: 15px;
 
@@ -370,7 +370,8 @@ ons-select i{
     padding-top:18px;
 }
 #main-enciclopedia-detalle .imagen img{
-    max-width: 80% ;
+    max-width: 100% ;
+    padding:0;
 }
 .text-center{
     text-align: center;

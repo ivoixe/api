@@ -57,18 +57,17 @@
         };
         window.fn.load = function(page) {
             categorias();
-
-
             if(page =="detalle.html"){
-
                  datas_detalle(null);
-
             }
             if(page =="kantrivia.html"){
+                //dibuja();
                 var comprobacion = comprobar_preguntas();
-                console.log('compro kan'+comprobacion);
                 if(comprobacion==true){
                    page="resultado.html";
+                }else{
+                    vaciar_juego();
+                    dibuja();
                 }
             }
             if(page =="resultado.html"){
@@ -93,9 +92,12 @@
         };
 
         ons.ready(function() {
+
             $( document ).on( 'click','.berri', function() {
                 vaciar_juego();
-
+                vaciar_juego_preguntas();
+                localStorage.setItem('juego_nuevo',true);
+                dibuja();
                 content.load('kantrivia.html')
                     .then(
                         menu.close.bind(menu)
@@ -134,9 +136,9 @@
 
                 </ons-list-item>
 
-                <ons-list-item onclick="fn.load('configuracion.html')" tappable>
+                <ons-list-item onclick="fn.load('kantrivia.html')" tappable>
 
-                    Configuración
+                    Kantrivia
 
                 </ons-list-item>
 
@@ -493,7 +495,7 @@
                     <ons-col class="text-center">
                         <div class="puntos_1 mini-bloque">
                             <div class="imagen mini-bloque">
-                                <img class="img-responsive soporte img-circle" src="../img/imagen-soporte.png" />
+                                <img class="img-responsive soporte img-circle" src="img/imagen-soporte.png" />
                                 <span id="partidas" class="numero"></span>
                             </div>
                         </div>
@@ -502,7 +504,7 @@
                     <ons-col class="text-center" >
                         <div class="puntos_2 mini-bloque">
                             <div class="imagen mini-bloque">
-                                <img class="img-responsive soporte img-circle" src="../img/imagen-soporte.png" />
+                                <img class="img-responsive soporte img-circle" src="img/imagen-soporte.png" />
                                 <span id="hoberena" class="numero"></span>
                             </div>
                         </div>
@@ -511,7 +513,7 @@
                     <ons-col class="text-center" >
                         <div class="puntos_3 mini-bloque">
                             <div class="imagen mini-bloque">
-                                <img class="img-responsive soporte img-circle" src="../img/imagen-soporte.png" />
+                                <img class="img-responsive soporte img-circle" src="img/imagen-soporte.png" />
                                 <span id="ranking" class="numero"></span>
                             </div>
                         </div>
@@ -520,7 +522,7 @@
                 </ons-row>
             </div>
             <div class="btn berri text-center">
-                <img class="img-responsive" src="../img/volver-jugar.png">
+                <img class="img-responsive" src="img/volver-jugar.png">
                 <span> Jolastu partida berri bat</span>
 
             </div>
