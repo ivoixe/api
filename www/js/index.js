@@ -67,7 +67,7 @@ var app = {
     }
 };
 $(document).ready(function() {
-
+    window.fn.load('home.html');
     carga_preguntas();
     vaciar_juego();
     dibuja();
