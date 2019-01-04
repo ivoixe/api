@@ -327,7 +327,7 @@ function dibuja(){
         error: function(e){
 
           //  alert(window.location.pathname);
-           alert('error'+e.status+location.href);
+           alert('error'+e.status);
 
         }
     });
@@ -353,8 +353,8 @@ function vaciar_juego(){
             });
            // dibuja();
         },
-        error: function(){
-
+        error: function(e){
+            alert('error'+e.status);
         }
     });
 
@@ -376,8 +376,8 @@ function vaciar_juego_preguntas(){
             });
             // dibuja();
         },
-        error: function(){
-
+        error: function(e){
+            alert('error'+e.status);
         }
     });
 
@@ -507,8 +507,8 @@ function datos_resultado(){
             $('#ranking').text(n);
             vaciar_juego_preguntas();
         },
-        error: function(){
-
+        error: function(e){
+            alert('error'+e.status);
         }
     });
 
