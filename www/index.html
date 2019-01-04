@@ -42,113 +42,122 @@
     <link rel="stylesheet" href="css/onsen/onsen-css-components.min.css">
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <link  href="css/onsen/onsenui.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/colorbox/colorbox.css">
+
     <title>KANTAUR</title>
     <!-- <script type="text/javascript" src="cordova.js"></script> -->
     <script type="text/javascript" charset="utf-8" src="js/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/onsenui.min.js"></script>
-
-    <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript">
-        // app.initialize();
-        window.fn = {};
-        window.fn.open = function() {
-            var menu = document.getElementById('menu');
-            menu.open();
-        };
-        window.fn.load = function(page) {
-            categorias();
-            if(page =="detalle.html"){
-                 datas_detalle(null);
-            }
-            if(page =="kantrivia.html"){
-                //dibuja();
-                var comprobacion = comprobar_preguntas();
-                if(comprobacion==true){
-                   page="resultado.html";
-                }else{
-                    vaciar_juego();
-                    dibuja();
-                }
-            }
-            if(page =="resultado.html"){
-                var comprobacion = comprobar_preguntas();
-                datos_resultado();
-              //  console.log('compro res'+comprobacion);
-                if(comprobacion == false){
-                    page="kantrivia.html";
-                }
-        }
-           // var t= dibuja();
-            // $(document).find('#preguntasContenido').html(t);
-
-            var content = document.getElementById('content');
-            var menu = document.getElementById('menu');
-            content.load(page)
-                .then(
-                    menu.close.bind(menu)
-                );
+    <script type="text/javascript" charset="utf-8" src="js/jack/jquery.zoom.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/colorbox/jquery.colorbox-min.js"></script>
 
 
-        };
-
-        ons.ready(function() {
-
-            $( document ).on( 'click','.berri', function() {
-                vaciar_juego();
-                vaciar_juego_preguntas();
-                localStorage.setItem('juego_nuevo',true);
-                dibuja();
-                content.load('kantrivia.html')
-                    .then(
-                        menu.close.bind(menu)
-                    );
+   <script type="text/javascript" src="js/index.js"></script>
+   <script type="text/javascript">
+       // app.initialize();
 
 
-            });
-        });
+       window.fn = {};
+       window.fn.open = function() {
+           var menu = document.getElementById('menu');
+           menu.open();
+       };
+       window.fn.load = function(page) {
+           categorias();
+           if(page =="detalle.html"){
+                datas_detalle(null);
+           }
+           if(page =="kantrivia.html"){
+               //dibuja();
+               var comprobacion = comprobar_preguntas();
+               if(comprobacion==true){
+                  page="resultado.html";
+               }else{
+                   vaciar_juego();
+                   dibuja();
+               }
+           }
+           if(page =="resultado.html"){
+               var comprobacion = comprobar_preguntas();
+               datos_resultado();
+             //  console.log('compro res'+comprobacion);
+               if(comprobacion == false){
+                   page="kantrivia.html";
+               }
+       }
+          // var t= dibuja();
+           // $(document).find('#preguntasContenido').html(t);
+
+           var content = document.getElementById('content');
+           var menu = document.getElementById('menu');
+           content.load(page)
+               .then(
+                   menu.close.bind(menu)
+               );
 
 
-    </script>
+       };
+
+       ons.ready(function() {
+           /********************************/
+
+           /********************************/
+           $( document ).on( 'click','.berri', function() {
+               vaciar_juego();
+               vaciar_juego_preguntas();
+               localStorage.setItem('juego_nuevo',true);
+               dibuja();
+               content.load('kantrivia.html')
+                   .then(
+                       menu.close.bind(menu)
+                   );
+
+
+           });
+       });
+
+
+   </script>
 </head>
 
 <body class="app">
 <ons-splitter>
 
-    <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable >
+   <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable >
 
-        <ons-page id="home">
+       <ons-page id="home">
 
-            <ons-list>
+           <ons-list>
 
-                <ons-list-item onclick="fn.load('home.html')" tappable>
+               <ons-list-item onclick="fn.load('home.html')" tappable>
 
-                    Kantaur
+                   Kantaur
 
-                </ons-list-item>
-                <ons-list-item onclick="fn.load('entziklopedia.html')" tappable>
+               </ons-list-item>
+               <ons-list-item onclick="fn.load('entziklopedia.html')" tappable>
 
-                    Entziklopedia
+                   Entziklopedia
 
-                </ons-list-item>
+               </ons-list-item>
 
-                <ons-list-item onclick="fn.load('hondakinak.html')" tappable>
-                    Hondakinak
+               <ons-list-item onclick="fn.load('hondakinak.html')" tappable>
+                   Hondakinak
 
-                </ons-list-item>
+               </ons-list-item>
 
-                <ons-list-item onclick="fn.load('kantrivia.html')" tappable>
+               <ons-list-item onclick="fn.load('kantrivia.html')" tappable>
 
-                    Kantrivia
+                   Kantrivia
 
-                </ons-list-item>
+               </ons-list-item>
 
-            </ons-list>
+           </ons-list>
 
-        </ons-page>
+       </ons-page>
 
-    </ons-splitter-side>
+   </ons-splitter-side>
 
-    <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
+   <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
 
 </ons-splitter>
 
@@ -156,37 +165,38 @@
 
 <template id="home.html">
 
-    <ons-page>
+   <ons-page>
 
-        <ons-toolbar>
+       <ons-toolbar>
 
-            <div class="left">
+           <div class="left">
 
-                <ons-toolbar-button onclick="fn.open()">
+               <ons-toolbar-button onclick="fn.open()">
 
-                    <ons-icon icon="md-menu"></ons-icon>
+                   <ons-icon icon="md-menu"></ons-icon>
 
-                </ons-toolbar-button>
+               </ons-toolbar-button>
 
-            </div>
+           </div>
 
-            <div class="center">
+           <div class="center">
 
 
 
-            </div>
+           </div>
 
-        </ons-toolbar>
+       </ons-toolbar>
 
-        <!-- <ons-row align="center">
-             <ons-col class="loading" align="center">
-                 <svg class="progress-circular progress-circular--indeterminate">
-                     <circle class="progress-circular__background"/>
-                     <circle class="progress-circular__primary progress-circular--indeterminate__primary"/>
-                     <circle class="progress-circular__secondary progress-circular--indeterminate__secondary"/>
-                 </svg>
-             </ons-col>
-         </ons-row> -->
+       <!-- <ons-row align="center">
+            <ons-col class="loading" align="center">
+                <svg class="progress-circular progress-circular--indeterminate">
+                    <circle class="progress-circular__background"/>
+                    <circle class="progress-circular__primary progress-circular--indeterminate__primary"/>
+                    <circle class="progress-circular__secondary progress-circular--indeterminate__secondary"/>
+                </svg>
+            </ons-col>
+        </ons-row> -->
+
         <div id="main-menu" class="page__content ons-page-inner">
 
             <div class="titulo">
@@ -252,7 +262,11 @@
             </div>
 
         </ons-toolbar>
+        <div id="light" style="display: none;">
+
+        </div>
         <div id="main-enciclopedia-detalle" class="page__content ons-page-inner">
+
             <div class="titulo">
                 <h1><i class="fas fa-book-open"></i> ENTZIKLOPEDIA</h1>
             </div>
@@ -260,9 +274,14 @@
                 <div class="content-content text-center">
                     <h2><i class="fas fa-chevron-left left back "></i><span></span><i class="fas fa-chevron-right right next"></i></h2>
                     <h3></h3>
-                    <div class="imagen">
-                        <img class="img-responsive central" src="">
-                    </div>
+                    <ons-gesture-detector>
+
+                        <div class="easyzoom easyzoom--overlay easyzoom--with-thumbnails imagen zoom">
+                            <a class="thumbnails" href="">
+                                <img src="" alt="" >
+                            </a>
+                        </div>
+                    </ons-gesture-detector>
                     <div class="textos">
                        
                         <ons-row align="center">

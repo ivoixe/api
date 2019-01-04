@@ -112,6 +112,16 @@ $(document).ready(function() {
         navigator.splashscreen.hide();
     }, 2000);*/
 
+
+    //valido si no funciona el ultimo
+    /*$(document).on('click','#main-enciclopedia-detalle .imagen a',function(e) {
+        e.preventDefault();
+        var imagen=$(this).attr('data-zoom-image');
+
+        $('#light').show();
+       // $('#light').append('<div class=""><img src="'+imagen+'"/></div>');
+    });*/
+
 });
 function categorias(){
     $.ajax({
@@ -161,24 +171,40 @@ function datas_detalle(direccion){
         data: ({filtro:filtro,direccion:direccion}),
         dataType: "json",
         success: function(resp){
-            
+
+            $(document).find('.zoom a').colorbox({
+                width:'100%',
+                height:'100%',
+                maxWidth:'100%',
+                maxHeight:'100%',
+                'onComplete': function(){
+                    $('#cboxLoadedContent').zoom({ on:'click' });
+                }
+            });
+
+           /**********************************/
+
             localStorage.removeItem('detalle');
             localStorage.setItem("detalle", resp.id);
             var id_seccion = localStorage.getItem('detalle');
-            
+           // console.log(resp.imagen.small);
             $('#main-enciclopedia-detalle h2 span').text(resp.titulo);
             $('#main-enciclopedia-detalle h3').text(resp.titulo_detalle);
-            $('#main-enciclopedia-detalle .imagen img').attr('src',resp.imagen.imagen);
+            $('#main-enciclopedia-detalle .imagen img').attr('src',resp.imagen.small.imagen);
+            $('#main-enciclopedia-detalle .imagen a').attr('href',resp.imagen.imagen);
             $('#main-enciclopedia-detalle .textos').html(resp.descripcion);
             $('#main-enciclopedia-detalle').find('.right').addClass('next');
             $('#main-enciclopedia-detalle').find('.left').addClass('back');
             if(resp.sitio =="ultimo"){
-                     $('#main-enciclopedia-detalle').find('.back').removeClass('back');
+                     $(document).find('#main-enciclopedia-detalle .back').removeClass('back');
             }
             if(resp.sitio =="primero"){
-                    $('#main-enciclopedia-detalle').find('.next').removeClass('next');   
+                $(document).find('#main-enciclopedia-detalle .next').removeClass('next');
             }
-           
+            /*
+            $easyzoom = $(document).find('.easyzoom').easyZoom();
+            var api = $easyzoom.data('easyZoom');
+            $(document).find('.easyzoom').show();*/
 
         },
         error: function(){

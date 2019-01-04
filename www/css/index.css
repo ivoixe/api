@@ -134,7 +134,25 @@ body {
 
     }
 }
-
+#light{
+    position: fixed;
+    background: rgba(0,0,0,.6);
+    width: 100%;
+    float:left;
+    height: 100%;
+}
+#light img{
+    position:absolute;
+    display: table;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform:translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    max-width: 95%;
+}
 h1 {
     font-size:54px;
     font-weight:normal;
@@ -179,7 +197,9 @@ h1 {
     50% { opacity: 0.4; }
     to { opacity: 1.0; }
 }
- 
+.zoomImg{
+    background: rgba(0,0,0,1);
+}
 .blink {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
@@ -259,8 +279,13 @@ p,ul li,a,strong,h3,h2{
     font-weight:bold ;
     margin:0;
     font-size:36px;
-}
 
+}
+.content-listado h2 span{
+    width: 74%;
+    display: inline-block;
+    text-align: center;
+}
 .content-listado  h3{
     color:#135ca5;
     margin:0;
@@ -356,6 +381,13 @@ ons-select i{
     border:5px solid #88c3ff;
     padding:1px;
 }
+#list-filtro ons-row{
+    display: -webkit-flex; /* Safari */
+    -webkit-align-items: center; /* Safari 7.0+ */
+    display: flex;
+    display: -webkit-box;
+    align-content: stretch;
+}
 /**********ENCICLOPEDIA DETALLE*******************************************/
 #main-enciclopedia-detalle .imagen {
     padding-top:0px;
@@ -382,13 +414,17 @@ ons-select i{
 }
 .fa-chevron-left.left{
    float:left;
+    opacity: .5;
     margin-left: 15px;
 }
 .fa-chevron-right.right{
     float:right;
+    opacity: .5;
     margin-right: 15px;
 }
-
+.fa-chevron-left.left.back,.fa-chevron-right.right.next{
+    opacity: 1;
+}
 /******AHOULKUAK********************************/
 #main-aholkuak .content-content{
     background:#fff;
