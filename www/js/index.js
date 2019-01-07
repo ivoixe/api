@@ -71,6 +71,7 @@ $(document).ready(function() {
     carga_preguntas();
     vaciar_juego();
     dibuja();
+    alert();
     localStorage.setItem('jugando',true);
    $( document ).on( 'click','#main-enciclopedia-detalle .next', function() {
        
