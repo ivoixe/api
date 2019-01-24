@@ -64,12 +64,15 @@
        };
        window.fn.load = function(page) {
            categorias();
-           ons.notification.alert(page);
+           carga_preguntas();
            if(page =="detalle.html"){
+
+
                 datas_detalle(null);
            }
            if(page =="kantrivia.html"){
-               //dibuja();
+               vaciar_juego();
+               dibuja();
                var comprobacion = comprobar_preguntas();
                if(comprobacion==true){
                   page="resultado.html";
@@ -117,7 +120,9 @@
            });
        });
        document.addEventListener('deviceready', function () {
-                dibuja();
+
+           window.fn.load('home.html');
+
        }, false);
 
 
