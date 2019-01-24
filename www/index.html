@@ -64,6 +64,7 @@
        };
        window.fn.load = function(page) {
            categorias();
+           ons.notification.alert(page);
            if(page =="detalle.html"){
                 datas_detalle(null);
            }
