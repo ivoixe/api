@@ -65,6 +65,7 @@
        window.fn.load = function(page) {
            categorias();
            carga_preguntas();
+           vaciar_juego();
            if(page =="detalle.html"){
 
 
@@ -110,6 +111,7 @@
                vaciar_juego();
                vaciar_juego_preguntas();
                localStorage.setItem('juego_nuevo',true);
+               vaciar_juego();
                dibuja();
                content.load('kantrivia.html')
                    .then(

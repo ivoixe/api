@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="81a8883e-b2d9-4588-96fe-4e185427c3e2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
-      <change beforePath="$PROJECT_DIR$/www/js/index.js" afterPath="$PROJECT_DIR$/www/js/index.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -47,8 +46,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="73" column="30" lean-forward="true" selection-start-line="73" selection-start-column="30" selection-end-line="73" selection-end-column="30" />
+            <state relative-caret-position="714">
+              <caret line="93" column="62" lean-forward="true" selection-start-line="93" selection-start-column="62" selection-end-line="93" selection-end-column="62" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#ons-page#0;n#template#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -80,7 +79,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>vaciar</find>
       <find>console.log</find>
       <find>navigator</find>
       <find>vaci</find>
@@ -110,6 +108,7 @@
       <find>devicerea</find>
       <find>alert</find>
       <find>resultado</find>
+      <find>dibuja();</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -201,12 +200,12 @@
       <workItem from="1546499901874" duration="25862000" />
       <workItem from="1546586220624" duration="11485000" />
       <workItem from="1546845087563" duration="3420000" />
-      <workItem from="1548339146050" duration="2383000" />
+      <workItem from="1548339146050" duration="2777000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109501000" />
+    <option name="totallyTimeSpent" value="109895000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1296" height="1010" extended-state="6" />
@@ -624,8 +623,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="73" column="30" lean-forward="true" selection-start-line="73" selection-start-column="30" selection-end-line="73" selection-end-column="30" />
+        <state relative-caret-position="714">
+          <caret line="93" column="62" lean-forward="true" selection-start-line="93" selection-start-column="62" selection-end-line="93" selection-end-column="62" />
           <folding>
             <element signature="n#style#0;n#div#0;n#ons-page#0;n#template#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
