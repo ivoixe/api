@@ -67,13 +67,11 @@
            carga_preguntas();
            vaciar_juego();
            if(page =="detalle.html"){
-
-
                 datas_detalle(null);
            }
            if(page =="kantrivia.html"){
                vaciar_juego();
-               dibuja();
+
                var comprobacion = comprobar_preguntas();
                if(comprobacion==true){
                   page="resultado.html";
