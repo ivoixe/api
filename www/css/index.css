@@ -625,3 +625,8 @@ ons-select i{
     font-size:30px;
     text-shadow: 1px -1px 0px  #fff;
 }
+.photo_3d {
+
+    cursor: crosshair;
+
+}

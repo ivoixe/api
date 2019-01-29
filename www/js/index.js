@@ -100,6 +100,15 @@ $(document).ready(function() {
        }
 
     });
+    $( document ).on( 'click','#choose-sel-interactua select', function(e) {
+            var carga = $(this).val();
+
+            interactua(carga);
+    });
+
+
+
+
 
 
     $( document ).on('change','#choose-sel select',function() {
@@ -121,6 +130,47 @@ $(document).ready(function() {
     });*/
 
 });
+function consejos(){
+    $.ajax({
+        method: "POST",
+        url:'https://app.kantaur.com/scripts/conexiones_app/consejos.php',
+        data: ({id:'3'}),
+        dataType: "json",
+        success: function(resp){
+            $.each(resp, function(k,v) {
+
+                //onclick="fn.load('detalle.html')"
+             /*     <img src="mini.jpg" width="200" height="200"
+      class="reel"
+      id="image"
+      data-images="mini/###.jpg"
+      data-frames="20"
+      data-frame="14"
+      data-rows="6"
+      data-row="3"
+      data-speed="0.3">>*/
+
+
+               $('#main-aholkuak .content-content').append('<ons-row >' +
+                    '                        <ons-col class="left"  id="urlcute" align="center">' +
+                    '                            <div class="imagen  result  ">' +
+                    '                                <img  id="image_1" class=" img-responsive" src="'+v.imagen+'"  >' +
+                    '                            </div>' +
+                    '                        </ons-col>' +
+                    '                        <ons-col class="texto">' +
+                    '                            <p>'+v.titulo+'</p>' +
+                    '                        </ons-col>' +
+                    '                    </ons-row>'
+                );
+
+
+            });
+        },
+        error: function(){
+
+        }
+    });
+}
 function categorias(){
     $.ajax({
         method: "POST",
@@ -129,7 +179,7 @@ function categorias(){
         dataType: "json",
         success: function(resp){
             $.each(resp.categorias, function(k,v) {
-                $('#choose-sel select').append($('<option>', {
+                $('select').append($('<option>', {
                     value: v.id,
                     text: v.titulo
                 }));
@@ -189,6 +239,9 @@ function datas_detalle(direccion){
             $('#main-enciclopedia-detalle h2 span').text(resp.titulo);
             $('#main-enciclopedia-detalle h3').text(resp.titulo_detalle);
             $('#main-enciclopedia-detalle .imagen img').attr('src',resp.imagen.small.imagen);
+           // $('#main-enciclopedia-detalle .imagen img').addClass('reel');
+
+           // img-src="'+v.imagen+'" data-images="'+v.demas+'/###_original.jpg"   data-frame="14" data-rows="6" data-speed="0.3"  data-frames="20" data-footage="4"  width="126" height="126" data-revolution="800"
             $('#main-enciclopedia-detalle .imagen a').attr('href',resp.imagen.imagen);
             $('#main-enciclopedia-detalle .textos').html(resp.descripcion);
             $('#main-enciclopedia-detalle').find('.right').addClass('next');
@@ -198,12 +251,79 @@ function datas_detalle(direccion){
             }
             if(resp.sitio =="primero"){
                 $(document).find('#main-enciclopedia-detalle .next').removeClass('next');
-            }
-            /*
-            $easyzoom = $(document).find('.easyzoom').easyZoom();
-            var api = $easyzoom.data('easyZoom');
-            $(document).find('.easyzoom').show();*/
+                /*
+                $easyzoom = $(document).find('.easyzoom').easyZoom();
+                var api = $easyzoom.data('easyZoom');
+                $(document).find('.easyzoom').show();*/
 
+            }
+          //  $(document).find("#image-detalle").reel({});
+
+        },
+        error: function(){
+
+        }
+    });
+}
+function interactua(categoria){
+    console.log(categoria);
+    /*******limpiamos lo que hay de antes*******************/
+    $('#main-interactua.imagen a').attr('href','');
+    $('#main-interactua .textos').html('');
+    $('#main-interactua img').remove();
+    $('#main-interactua h2 span').text('');
+    $('#main-interactua h3').text('');
+    $.ajax({
+        method: "POST",
+        url:'https://app.kantaur.com/scripts/conexiones_app/interactua.php',
+        data: ({id:categoria}),
+        dataType: "json",
+        success: function(resp){
+        console.log(resp.imagen.dataimages);
+            $(document).find('.zoom a').colorbox({
+                width:'100%',
+                height:'100%',
+                maxWidth:'100%',
+                maxHeight:'100%',
+                'onComplete': function(){
+                    $('#cboxLoadedContent').zoom({ on:'click' });
+                }
+            });
+
+            /**********************************/
+           /* src="mini.jpg" width="200" height="200"
+        class="reel"
+            id="image"
+            data-images="mini/###.jpg"*/
+
+            $(document).find('#img-interactua');
+           //  console.log(resp);
+            $('#main-interactua h2 span').text(resp.titulo);
+            $('#main-interactua h3').text(resp.titulo_detalle);
+          //  $('#main-interactua .imagen img').attr('src',resp.imagen.dataimages+'/0.jpg');
+         //   $('#main-interactua .imagen img').attr('data-images',resp.imagen.dataimages+'/###.jpg');
+           // img-interactua
+
+            // $('#main-enciclopedia-detalle .imagen img').addClass('reel');
+
+            // img-src="'+v.imagen+'" data-images="'+v.demas+'/###_original.jpg"   data-frame="14" data-rows="6" data-speed="0.3"  data-frames="20" data-footage="4"  width="126" height="126" data-revolution="800"
+            $('#main-interactua.imagen a').attr('href',resp.imagen.imagen);
+            $('#main-interactua .textos').html(resp.descripcion);
+
+            $(document).find('.photo_3d').rotate3d({
+                'source': resp.imagen.dataimages,
+                'count' : 22,
+                'ext' : '.jpg',
+                 'speed': 10,
+            });
+            $(document).find('.photo_3d').css({'posimgition:relative':'z-index:9999999'})
+            $(document).find('.photo_3d').find('img').css('max-width','100%')
+
+
+            //  $(document).find("#image-detalle").reel({});
+           /* $(document).find('#img-interactua').reel();
+            $(document).find('#img-interactua').css('background-size','inherit');
+            $.reel.def.indicator = 5;*/
         },
         error: function(){
 
@@ -447,7 +567,7 @@ function datos_resultado(){
 
     var res_num= buenas * 10 /todas_count;
 
-    var historial = JSON.parse(localStorage.getItem("partidas"));
+    historial = JSON.parse(localStorage.getItem("partidas"));
     if(!historial){
         part.push(res_num);
         localStorage.setItem('partidas', JSON.stringify(part));
