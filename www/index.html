@@ -23,8 +23,9 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="telephone=no " />
     <meta name="msapplication-tap-highlight" content="no" />
+
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
     <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
     <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
@@ -47,10 +48,19 @@
     <title>KANTAUR</title>
   <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/jquery-1.12.4.min.js"></script>
+
     <script type="text/javascript" charset="utf-8" src="js/onsenui.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/jack/jquery.zoom.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/colorbox/jquery.colorbox-min.js"></script>
 
+
+    <!--
+      <script type="text/javascript" charset="utf-8" src="js/3dEye-master/3deye.min.js"></script>
+     <script type="text/javascript" charset="utf-8" src="js/3d/reel.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/3d/jquery-reel.js"></script>
+
+      -->
+    <script type="text/javascript" charset="utf-8" src="js/rotate3D/js/rotate.js"></script>
 
    <script type="text/javascript" src="js/index.js"></script>
    <script type="text/javascript">
@@ -64,8 +74,11 @@
        };
        window.fn.load = function(page) {
            categorias();
+           consejos();
+           //interactua(); 
            carga_preguntas();
            vaciar_juego();
+
            if(page =="detalle.html"){
                 datas_detalle(null);
            }
@@ -123,13 +136,14 @@
 
            window.fn.load('home.html');
 
+
        }, false);
 
 
    </script>
 </head>
 
-<body class="app">
+<body class="app " data-id="sequence-multi-row">
 <ons-splitter>
 
    <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable >
@@ -152,6 +166,13 @@
                <ons-list-item onclick="fn.load('hondakinak.html')" tappable>
                    Hondakinak
 
+               </ons-list-item>
+               <ons-list-item onclick="fn.load('aholkuak.html')" tappable>
+                   Aholkuak
+
+               </ons-list-item>
+               <ons-list-item onclick="fn.load('interactua.html')" tappable>
+                   interactua
                </ons-list-item>
 
                <ons-list-item onclick="fn.load('kantrivia.html')" tappable>
@@ -286,8 +307,8 @@
                     <ons-gesture-detector>
 
                         <div class="easyzoom easyzoom--overlay easyzoom--with-thumbnails imagen zoom">
-                            <a class="thumbnails" href="">
-                                <img src="" alt="" >
+                            <a class="thumbnails result" href="">
+                                <img   src="" alt="" >
                             </a>
                         </div>
                     </ons-gesture-detector>
@@ -360,6 +381,56 @@
     </ons-page>
 
 </template>
+<template id="interactua.html">
+
+    <ons-page>
+
+        <ons-toolbar>
+
+            <div class="left">
+
+                <ons-toolbar-button onclick="fn.open()">
+
+                    <ons-icon icon="md-menu"></ons-icon>
+
+                </ons-toolbar-button>
+
+            </div>
+
+        </ons-toolbar>
+
+        <div id="main-interactua" class="page__content ons-page-inner">
+
+            <div class="titulo">
+                <h1><i class="fas fa-book-open"></i>INTERACTUA</h1>
+            </div>
+            <div class="content-select">
+                <ons-select id="choose-sel-interactua" >
+                    <i class="fas fa-caret-down"></i>
+                    <select class="  ">
+                        <option value="basic">Espezie guztiak</option>
+
+                    </select>
+                </ons-select>
+            </div>
+            <div class="content-listado">
+                <div class="content-content text-center">
+                    <h2><i class="fas fa-chevron-left left back "></i><span></span><i class="fas fa-chevron-right right next"></i></h2>
+                    <h3></h3>
+
+
+                        <div class='photo_3d'></div>
+
+
+
+                </div>
+
+            </div>
+        </div>
+
+    </ons-page>
+
+</template>
 <template id="aholkuak.html">
 
     <ons-page>
@@ -385,29 +456,8 @@
             <div class="lista">
                 <div class="content-content">
 
-                    <ons-row >
-                        <ons-col class="left" onclick="fn.load('detalle.html')" id="urlcute" align="center">
-                            <div class="imagen">
-                                <img class="img-responsive " src="img/borrar.png">
-                            </div>
 
-                        </ons-col>
-                        <ons-col class="texto">
-                            <p>texto</p>
-                        </ons-col>
 
-                    </ons-row>
-                    <ons-row>
-                        <ons-col class="left" onclick="fn.load('detalle.html')" id="urlcute" align="center">
-                            <div class="imagen">
-                                <img class="img-responsive " src="img/borrar.png">
-                            </div>
-
-                        </ons-col>
-                        <ons-col class="texto">
-                            <p>texto</p>
-                        </ons-col>
-                    </ons-row>
                 </div>
 
             </div>
