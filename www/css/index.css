@@ -626,7 +626,9 @@ ons-select i{
     text-shadow: 1px -1px 0px  #fff;
 }
 .photo_3d {
-
+    background-size: cover ;
+    background: url('../img/fondo_mar_1.jpg') ;
     cursor: crosshair;
+    height:500px;
 
 }

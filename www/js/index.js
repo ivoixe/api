@@ -59,7 +59,7 @@ var app = {
             var text = document.getElementById('optionLabel').value;
             option.innerText = text;
             text = '';
-            document.getElementById('dynamic-sel').appendChild(option);
+            document.getElementById('dynamic-sel').appendChild(option); 
         }
 
 
@@ -312,8 +312,8 @@ function interactua(categoria){
 
             $(document).find('.photo_3d').rotate3d({
                 'source': resp.imagen.dataimages,
-                'count' : 22,
-                'ext' : '.jpg',
+                'count' : 23,
+                'ext' : '.png',
                  'speed': 10,
             });
             $(document).find('.photo_3d').css({'posimgition:relative':'z-index:9999999'})
