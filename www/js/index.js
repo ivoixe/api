@@ -298,8 +298,8 @@ function interactua(categoria){
 
             $(document).find('#img-interactua');
            //  console.log(resp);
-            $('#main-interactua h2 span').text(resp.titulo);
-            $('#main-interactua h3').text(resp.titulo_detalle);
+          //  $('#main-interactua h2 span').text(resp.titulo);
+           // $('#main-interactua h3').text(resp.titulo_detalle);
           //  $('#main-interactua .imagen img').attr('src',resp.imagen.dataimages+'/0.jpg');
          //   $('#main-interactua .imagen img').attr('data-images',resp.imagen.dataimages+'/###.jpg');
            // img-interactua
