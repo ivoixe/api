@@ -100,7 +100,7 @@ $(document).ready(function() {
        }
 
     });
-    $( document ).on( 'click','#choose-sel-interactua select', function(e) {
+    $( document ).on( 'change','#choose-sel-interactua select', function(e) {
             var carga = $(this).val();
 
             interactua(carga);
