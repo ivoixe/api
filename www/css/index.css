@@ -626,9 +626,21 @@ ons-select i{
     text-shadow: 1px -1px 0px  #fff;
 }
 .photo_3d {
-    background-size: cover ;
-    background: url('../img/fondo_mar_1.jpg') ;
+    position: absolute;
     cursor: crosshair;
-    height:500px;
-
+    display: table;
+    top:50%;
+    left:50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    background-repeat: no-repeat;
+}
+.content-interactiva{
+    position: relative;
+}
+.content-interactiva img{
+    max-width: 100%;
 }

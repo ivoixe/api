@@ -270,7 +270,7 @@ function interactua(categoria){
     /*******limpiamos lo que hay de antes*******************/
     $('#main-interactua.imagen a').attr('href','');
     $('#main-interactua .textos').html('');
-    $('#main-interactua img').remove();
+    $('#main-interactua .photo_3d img').remove();
     $('#main-interactua h2 span').text('');
     $('#main-interactua h3').text('');
     $.ajax({
