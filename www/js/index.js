@@ -179,7 +179,26 @@ function categorias(){
         dataType: "json",
         success: function(resp){
             $.each(resp.categorias, function(k,v) {
-                $('select').append($('<option>', {
+                $('#choose-sel select').append($('<option>', {
+                    value: v.id,
+                    text: v.titulo
+                }));
+            });
+        },
+        error: function(){
+
+        }
+    });
+}
+function categorias_interactua(){
+    $.ajax({
+        method: "POST",
+        url:'https://app.kantaur.com/scripts/conexiones_app/interactua.php',
+        data: ({id:'3'}),
+        dataType: "json",
+        success: function(resp){
+            $.each(resp.categorias, function(k,v) {
+                $('#choose-sel-interactua select').append($('<option>', {
                     value: v.id,
                     text: v.titulo
                 }));
