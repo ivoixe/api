@@ -193,7 +193,7 @@ function categorias(){
 function categorias_interactua(){
     $.ajax({
         method: "POST",
-        url:'https://app.kantaur.com/scripts/conexiones_app/interactua.php',
+        url:'https://app.kantaur.com/scripts/conexiones_app/categorias_interactua.php',
         data: ({id:'3'}),
         dataType: "json",
         success: function(resp){
