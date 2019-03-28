@@ -133,7 +133,7 @@ $(document).ready(function() {
 function consejos(){
     $.ajax({
         method: "POST",
-        url:'https://app.kantaur.com/scripts/conexiones_app/consejos.php',
+        url:'https://www.kantaur.com/scripts/conexiones_app/consejos.php',
         data: ({id:'3'}),
         dataType: "json",
         success: function(resp){
@@ -174,7 +174,7 @@ function consejos(){
 function categorias(){
     $.ajax({
         method: "POST",
-        url:'https://app.kantaur.com/scripts/conexiones_app/categorias.php',
+        url:'https://www.kantaur.com/scripts/conexiones_app/categorias.php',
         data: ({id:'3'}),
         dataType: "json",
         success: function(resp){
@@ -193,7 +193,7 @@ function categorias(){
 function categorias_interactua(){
     $.ajax({
         method: "POST",
-        url:'https://app.kantaur.com/scripts/conexiones_app/categorias_interactua.php',
+        url:'https://www.kantaur.com/scripts/conexiones_app/categorias_interactua.php',
         data: ({id:'3'}),
         dataType: "json",
         success: function(resp){
@@ -215,7 +215,7 @@ function datas(id,filtro,direccion){
 
     $.ajax({
         method: "POST",
-        url:'https://app.kantaur.com/scripts/conexiones_app/index.php',
+        url:'https://www.kantaur.com/scripts/conexiones_app/index.php',
         data: ({id:id,filtro:filtro,direccion:direccion}),
         dataType: "json",
         success: function(resp){
@@ -234,7 +234,7 @@ function datas_detalle(direccion){
 
     $.ajax({
         method: "POST",
-        url:'https://app.kantaur.com/scripts/conexiones_app/detalle.php',
+        url:'https://www.kantaur.com/scripts/conexiones_app/detalle.php',
         data: ({filtro:filtro,direccion:direccion}),
         dataType: "json",
         success: function(resp){
@@ -294,7 +294,7 @@ function interactua(categoria){
     $('#main-interactua h3').text('');
     $.ajax({
         method: "POST",
-        url:'https://app.kantaur.com/scripts/conexiones_app/interactua.php',
+        url:'https://www.kantaur.com/scripts/conexiones_app/interactua.php',
         data: ({id:categoria}),
         dataType: "json",
         success: function(resp){
@@ -352,7 +352,7 @@ function interactua(categoria){
 function carga_preguntas(){
     $.ajax({
         method: "POST",
-        url:'https://app.kantaur.com/scripts/conexiones_app/preguntas.php',
+        url:'https://www.kantaur.com/scripts/conexiones_app/preguntas.php',
         dataType: "json",
         success: function(resp){
             var datas=  JSON.stringify(resp);
