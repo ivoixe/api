@@ -134,7 +134,7 @@ function carga_seccion(){
     $.ajax({
         method: "POST",
         url:'https://www.kantaur.com/scripts/conexiones_app/seccion.php',
-        data: ({id:'3'}),
+        data: ({id:'4'}),
         dataType: "json",
         success: function(resp){
 
