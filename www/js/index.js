@@ -372,8 +372,8 @@ function carga_preguntas(){
         dataType: "json",
         success: function(resp){
             var datas=  JSON.stringify(resp);
+            localStorage.removeItem("todas_preguntas");
             localStorage.setItem("todas_preguntas", datas);
-
         },
         error: function(){
 
@@ -677,6 +677,6 @@ function pregunta(res,id_pregunta){
    var  veo = JSON.parse(localStorage.getItem("pregunta"+id_pregunta));
     //console.log(typeof veo); //object
    // console.log(veo); //object
-    var comprobacion = carga_preguntas();
-    return comprobacion;
+  //  var comprobacion = carga_preguntas();
+   // return comprobacion;
 }
