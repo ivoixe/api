@@ -426,26 +426,26 @@ ons-select i{
     opacity: 1;
 }
 /******AHOULKUAK********************************/
-#main-aholkuak .content-content{
+#main-hondakinak .content-content{
     background:#fff;
     border:none;
 }
-#main-aholkuak .content-content ons-row{
+#main-hondakinak .content-content ons-row{
     background: #d7d7d7;
     padding:10px;
     margin-bottom:10px;
     border-radius:4px;
 }
-#main-aholkuak .content-content ons-col.texto{
+#main-hondakinak .content-content ons-col.texto{
     padding-left: 24px;
 }
-#main-aholkuak .content-content ons-col .imagen{
+#main-hondakinak .content-content ons-col .imagen{
     background: #1a7bc1;
     border-radius:4px;
     padding: 15px;
 }
 /*******HONDAKINAK*************************/
-#main-hondakinak h3{
+#main-aholkuak h3{
     color:#135ca5;
     font-weight: 500;
     margin-top:0;
@@ -453,25 +453,25 @@ ons-select i{
     line-height:48px;
 }
 @media(max-width: 480px){
-    #main-hondakinak h3{
+    #main-aholkuak h3{
 
         font-size: 18px;
         line-height:25px;
     }
 }
-#main-hondakinak .textos{
+#main-aholkuak .textos{
     text-align: left;
     mergin-top:20px;
     font-size:14px;
 }
 
-#main-hondakinak .textos ol{
+#main-aholkuak .textos ol{
     padding-left:0;
     margin-left:15px;
     font-size: 14px;
     font-family: 'Rajdhani';
 }
-#main-hondakinak .textos ol li{
+#main-aholkuak .textos ol li{
     margin-bottom:10px;
 }
 /***********TRIVIA****************************/

@@ -130,6 +130,23 @@ $(document).ready(function() {
     });*/
 
 });
+function carga_seccion(){
+    $.ajax({
+        method: "POST",
+        url:'https://www.kantaur.com/scripts/conexiones_app/seccion.php',
+        data: ({id:'3'}),
+        dataType: "json",
+        success: function(resp){
+
+            $('#main-aholkuak h3').text(resp.titulo);
+            $('#main-aholkuak textos').text(resp.descripcion);
+            $('#main-aholkuak .imagen img').attr('src',resp.imagen.imagen);
+        },
+        error: function(){
+
+        }
+    });
+}
 function consejos(){
     $.ajax({
         method: "POST",
@@ -151,7 +168,7 @@ function consejos(){
       data-speed="0.3">>*/
 
 
-               $('#main-aholkuak .content-content').append('<ons-row >' +
+               $('#main-hondakinak .content-content').append('<ons-row >' +
                     '                        <ons-col class="left"  id="urlcute" align="center">' +
                     '                            <div class="imagen  result  ">' +
                     '                                <img  id="image_1" class=" img-responsive" src="'+v.imagen+'"  >' +
