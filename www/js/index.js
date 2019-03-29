@@ -134,13 +134,12 @@ function carga_seccion(){
     $.ajax({
         method: "POST",
         url:'https://www.kantaur.com/scripts/conexiones_app/seccion.php',
-        data: ({id:'4'}),
+        data: ({id_sec:'4'}),
         dataType: "json",
-        success: function(resp){
-
-            $('#main-aholkuak h3').text(resp.titulo);
-            $('#main-aholkuak textos').text(resp.descripcion);
-            $('#main-aholkuak .imagen img').attr('src',resp.imagen.imagen);
+        success: function(resultado){
+            $('#main-aholkuak h1').text(resultado.titulo);
+            $('#main-aholkuak .textos').html(resultado.descripcion);
+            $('#main-aholkuak .imagen img').attr('src',resultado.imagen.imagen);
         },
         error: function(){
 
