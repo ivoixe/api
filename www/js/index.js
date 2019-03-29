@@ -137,7 +137,7 @@ function carga_seccion(){
         data: ({id_sec:'4'}),
         dataType: "json",
         success: function(resultado){
-            $('#main-aholkuak h1').text(resultado.titulo);
+            $('#main-aholkuak h1 span').text(resultado.titulo);
             $('#main-aholkuak .textos').html(resultado.descripcion);
             $('#main-aholkuak .imagen img').attr('src',resultado.imagen.imagen);
         },
