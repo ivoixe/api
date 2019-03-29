@@ -78,13 +78,15 @@
            consejos();
            carga_seccion();
            //interactua();
-           carga_preguntas();
+
            vaciar_juego();
+           carga_preguntas();
            if(page =="detalle.html"){
                 datas_detalle(null);
            }
            if(page =="kantrivia.html"){
                vaciar_juego();
+               carga_preguntas();
 
                var comprobacion = comprobar_preguntas();
                if(comprobacion==true){
@@ -176,7 +178,7 @@
                   Elkar eragiten du
                </ons-list-item>
 
-               <ons-list-item onclick="fn.load('kantrivia.html'); carga_preguntas();" tappable>
+               <ons-list-item onclick="fn.load('kantrivia.html');" tappable>
 
                    Kantrivia
 
