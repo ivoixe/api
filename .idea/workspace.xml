@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81a8883e-b2d9-4588-96fe-4e185427c3e2" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/www/css/index.css" afterPath="$PROJECT_DIR$/www/css/index.css" />
+      <change beforePath="$PROJECT_DIR$/www/js/index.js" afterPath="$PROJECT_DIR$/www/js/index.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,21 +35,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="37">
-              <caret line="367" column="24" lean-forward="false" selection-start-line="367" selection-start-column="9" selection-end-line="367" selection-end-column="24" />
+            <state relative-caret-position="372">
+              <caret line="626" column="37" lean-forward="true" selection-start-line="626" selection-start-column="37" selection-end-line="626" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/css/index.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="321">
+              <caret line="563" column="2" lean-forward="false" selection-start-line="563" selection-start-column="2" selection-end-line="563" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="553">
-              <caret line="114" column="17" lean-forward="true" selection-start-line="114" selection-start-column="17" selection-end-line="114" selection-end-column="17" />
+            <state relative-caret-position="554">
+              <caret line="587" column="34" lean-forward="false" selection-start-line="587" selection-start-column="34" selection-end-line="587" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -57,11 +69,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>select</find>
-      <find>list-filtro</find>
-      <find>inte</find>
-      <find>img</find>
-      <find>inter</find>
       <find>intera</find>
       <find>cate</find>
       <find>categorias()</find>
@@ -85,8 +92,13 @@
       <find>preguntas.php</find>
       <find>pregunta</find>
       <find>preguntas</find>
-      <find>carga_preguntas()</find>
       <find>hobe</find>
+      <find>comprobacion</find>
+      <find>no</find>
+      <find>berrir</find>
+      <find>resultado</find>
+      <find>notif</find>
+      <find>carga_preguntas()</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -107,10 +119,10 @@
         <option value="$PROJECT_DIR$/../../web/scripts/conexiones_app/categorias_interactua.php" />
         <option value="$PROJECT_DIR$/../../web/scripts/conexiones_app/seccion.php" />
         <option value="V:/PRISMA - APP KANTAUR - WEB 2019/web/scripts/conexiones_app/seccion.php" />
-        <option value="$PROJECT_DIR$/www/css/index.css" />
         <option value="V:/PRISMA - APP KANTAUR - WEB 2019/web/scripts/conexiones_app/preguntas.php" />
-        <option value="$PROJECT_DIR$/www/js/index.js" />
         <option value="$PROJECT_DIR$/www/index.html" />
+        <option value="$PROJECT_DIR$/www/css/index.css" />
+        <option value="$PROJECT_DIR$/www/js/index.js" />
       </list>
     </option>
   </component>
@@ -221,12 +233,12 @@
       <workItem from="1552054648418" duration="4437000" />
       <workItem from="1553262941310" duration="2971000" />
       <workItem from="1553844650380" duration="6758000" />
-      <workItem from="1553858015179" duration="4978000" />
+      <workItem from="1553858015179" duration="6665000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="177164000" />
+    <option name="totallyTimeSpent" value="178851000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1296" height="1010" extended-state="6" />
@@ -281,6 +293,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4403">
           <caret line="259" column="0" lean-forward="false" selection-start-line="259" selection-start-column="0" selection-end-line="259" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -318,6 +331,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4403">
           <caret line="259" column="0" lean-forward="false" selection-start-line="259" selection-start-column="0" selection-end-line="259" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -355,6 +369,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4403">
           <caret line="259" column="0" lean-forward="false" selection-start-line="259" selection-start-column="0" selection-end-line="259" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -409,6 +424,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9962">
           <caret line="586" column="0" lean-forward="true" selection-start-line="586" selection-start-column="0" selection-end-line="586" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -552,17 +568,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="162" column="29" lean-forward="false" selection-start-line="162" selection-start-column="29" selection-end-line="162" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/error_log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="748">
           <caret line="647" column="0" lean-forward="false" selection-start-line="647" selection-start-column="0" selection-end-line="647" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="563" column="2" lean-forward="false" selection-start-line="563" selection-start-column="2" selection-end-line="563" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="554">
+          <caret line="587" column="34" lean-forward="false" selection-start-line="587" selection-start-column="34" selection-end-line="587" selection-end-column="34" />
           <folding />
         </state>
       </provider>
@@ -577,16 +602,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="37">
-          <caret line="367" column="24" lean-forward="false" selection-start-line="367" selection-start-column="9" selection-end-line="367" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="114" column="17" lean-forward="true" selection-start-line="114" selection-start-column="17" selection-end-line="114" selection-end-column="17" />
+        <state relative-caret-position="372">
+          <caret line="626" column="37" lean-forward="true" selection-start-line="626" selection-start-column="37" selection-end-line="626" selection-end-column="37" />
           <folding />
         </state>
       </provider>

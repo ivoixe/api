@@ -609,6 +609,7 @@ ons-select i{
 }
 .btn.berri {
     position: relative;
+    font-family: 'Rajdhani-bold' !important;
 }
 .btn.berri span{
     position: absolute;
@@ -624,6 +625,7 @@ ons-select i{
     transform: translate(-50%,-50%);
     font-family: 'Rajdhani-bold';
     font-size:30px;
+    font-family: 'Rajdhani-bold' !important;
     text-shadow: 1px -1px 0px  #fff;
 }
 .photo_3d {

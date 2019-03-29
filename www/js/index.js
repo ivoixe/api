@@ -87,7 +87,7 @@ $(document).ready(function() {
     $( document ).on( 'click','.respuesta.marco', function(e) {
         var res = $(this).attr('res');
         var pre = $(this).attr('pregunta');
-        ons.notification.alert('');
+
 
         pregunta(res,pre);
         var mensaje = last_ans();
@@ -622,17 +622,18 @@ function datos_resultado(){
     }
     historial = JSON.parse(localStorage.getItem("partidas"));
     var suma_media= 0;
-    if(historial){
+
         $.each(historial, function (key, value) {
+            if(historial.length ==1){
+                comparacion= value;
+            }
             if(value > comparacion){
                 comparacion = value;
                 suma_media = suma_media + (value*1);
             }
             num_partidas ++;
         });
-    }else{
-        comparacion = suma_media;
-    }
+
 
 
     var media = suma_media/num_partidas ;
