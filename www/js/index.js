@@ -622,13 +622,18 @@ function datos_resultado(){
     }
     historial = JSON.parse(localStorage.getItem("partidas"));
     var suma_media= 0;
-    $.each(historial, function (key, value) {
-        if(value > comparacion){
-            comparacion = value;
-            suma_media = suma_media + (value*1);
-        }
-        num_partidas ++;
-    });
+    if(historial){
+        $.each(historial, function (key, value) {
+            if(value > comparacion){
+                comparacion = value;
+                suma_media = suma_media + (value*1);
+            }
+            num_partidas ++;
+        });
+    }else{
+        comparacion = suma_media;
+    }
+
 
     var media = suma_media/num_partidas ;
     var n = media.toFixed(1);
