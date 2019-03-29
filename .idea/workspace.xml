@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81a8883e-b2d9-4588-96fe-4e185427c3e2" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/config.xml" afterPath="$PROJECT_DIR$/config.xml" />
+      <change beforePath="$PROJECT_DIR$/www/js/index.js" afterPath="$PROJECT_DIR$/www/js/index.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,17 +33,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="411" column="74" lean-forward="true" selection-start-line="411" selection-start-column="74" selection-end-line="411" selection-end-column="74" />
+            <state relative-caret-position="452">
+              <caret line="409" column="49" lean-forward="true" selection-start-line="409" selection-start-column="49" selection-end-line="409" selection-end-column="49" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="config.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
@@ -104,9 +104,9 @@
       <find>notif</find>
       <find>hobere</find>
       <find>preguntas</find>
-      <find>14</find>
       <find>resultado</find>
       <find>carga_preguntas()</find>
+      <find>14</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -128,9 +128,9 @@
         <option value="V:/PRISMA - APP KANTAUR - WEB 2019/web/scripts/conexiones_app/seccion.php" />
         <option value="$PROJECT_DIR$/www/index.html" />
         <option value="$PROJECT_DIR$/www/css/index.css" />
-        <option value="$PROJECT_DIR$/www/js/index.js" />
         <option value="V:/PRISMA - APP KANTAUR - WEB 2019/web/scripts/conexiones_app/preguntas.php" />
         <option value="$PROJECT_DIR$/config.xml" />
+        <option value="$PROJECT_DIR$/www/js/index.js" />
       </list>
     </option>
   </component>
@@ -241,12 +241,12 @@
       <workItem from="1552054648418" duration="4437000" />
       <workItem from="1553262941310" duration="2971000" />
       <workItem from="1553844650380" duration="6758000" />
-      <workItem from="1553858015179" duration="8977000" />
+      <workItem from="1553858015179" duration="9060000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="181163000" />
+    <option name="totallyTimeSpent" value="181246000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1296" height="1010" extended-state="6" />
@@ -596,14 +596,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="411" column="74" lean-forward="true" selection-start-line="411" selection-start-column="74" selection-end-line="411" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="554">
@@ -624,6 +616,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="409" column="49" lean-forward="true" selection-start-line="409" selection-start-column="49" selection-end-line="409" selection-end-column="49" />
           <folding />
         </state>
       </provider>
