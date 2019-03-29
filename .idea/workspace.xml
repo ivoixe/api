@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81a8883e-b2d9-4588-96fe-4e185427c3e2" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
-      <change beforePath="$PROJECT_DIR$/www/js/index.js" afterPath="$PROJECT_DIR$/www/js/index.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,21 +34,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="633" column="20" lean-forward="false" selection-start-line="633" selection-start-column="20" selection-end-line="633" selection-end-column="20" />
+            <state relative-caret-position="37">
+              <caret line="367" column="24" lean-forward="false" selection-start-line="367" selection-start-column="9" selection-end-line="367" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="605">
-              <caret line="454" column="57" lean-forward="false" selection-start-line="454" selection-start-column="57" selection-end-line="454" selection-end-column="57" />
+            <state relative-caret-position="547">
+              <caret line="182" column="31" lean-forward="true" selection-start-line="182" selection-start-column="31" selection-end-line="182" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -86,8 +86,8 @@
       <find>preguntas.php</find>
       <find>pregunta</find>
       <find>preguntas</find>
-      <find>hobe</find>
       <find>carga_preguntas()</find>
+      <find>hobe</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -110,8 +110,8 @@
         <option value="V:/PRISMA - APP KANTAUR - WEB 2019/web/scripts/conexiones_app/seccion.php" />
         <option value="$PROJECT_DIR$/www/css/index.css" />
         <option value="V:/PRISMA - APP KANTAUR - WEB 2019/web/scripts/conexiones_app/preguntas.php" />
-        <option value="$PROJECT_DIR$/www/index.html" />
         <option value="$PROJECT_DIR$/www/js/index.js" />
+        <option value="$PROJECT_DIR$/www/index.html" />
       </list>
     </option>
   </component>
@@ -222,12 +222,12 @@
       <workItem from="1552054648418" duration="4437000" />
       <workItem from="1553262941310" duration="2971000" />
       <workItem from="1553844650380" duration="6758000" />
-      <workItem from="1553858015179" duration="3869000" />
+      <workItem from="1553858015179" duration="4595000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="176055000" />
+    <option name="totallyTimeSpent" value="176781000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1296" height="1010" extended-state="6" />
@@ -576,18 +576,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/index.html">
+    <entry file="file://$PROJECT_DIR$/www/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="605">
-          <caret line="454" column="57" lean-forward="false" selection-start-line="454" selection-start-column="57" selection-end-line="454" selection-end-column="57" />
+        <state relative-caret-position="37">
+          <caret line="367" column="24" lean-forward="false" selection-start-line="367" selection-start-column="9" selection-end-line="367" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/index.js">
+    <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="633" column="20" lean-forward="false" selection-start-line="633" selection-start-column="20" selection-end-line="633" selection-end-column="20" />
+        <state relative-caret-position="547">
+          <caret line="182" column="31" lean-forward="true" selection-start-line="182" selection-start-column="31" selection-end-line="182" selection-end-column="31" />
           <folding />
         </state>
       </provider>
