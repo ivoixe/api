@@ -425,7 +425,7 @@ function dibuja(){
                        '                        <div class="respuesta marco " pregunta="' + value.id + '" res="' + value.preguntas.respuesta2.valor + '" >' +
                        '                            <div class="respuesta-content">\n' +
                        '                                <div class="content text-center">' +
-                       '                                    <i class="fas fa-map-marker mark"><span>a</span></i>' +
+                       '                                    <i class="fas fa-map-marker mark"><span>b</span></i>' +
                        '                                    ' + value.preguntas.respuesta2.respuesta +
                        '                                </div>' +
                        '                            </div>' +
@@ -437,7 +437,7 @@ function dibuja(){
                        '                        <div class="respuesta marco"  pregunta="' + value.id + '" res="' + value.preguntas.respuesta3.valor + '"  >' +
                        '                            <div class="respuesta-content">' +
                        '                                <div class="content text-center">' +
-                       '                                    <i class="fas fa-map-marker mark"><span>a</span></i>' +
+                       '                                    <i class="fas fa-map-marker mark"><span>c</span></i>' +
                        '                                    ' + value.preguntas.respuesta3.respuesta +
                        '                                </div>' +
                        '                            </div>' +
@@ -447,7 +447,7 @@ function dibuja(){
                        '                        <div class="respuesta marco " pregunta="' + value.id + '" res="' + value.preguntas.respuesta4.valor + '" >' +
                        '                            <div class="respuesta-content">\n' +
                        '                                <div class="content text-center">' +
-                       '                                    <i class="fas fa-map-marker mark"><span>a</span></i>' +
+                       '                                    <i class="fas fa-map-marker mark"><span>d</span></i>' +
                        '                                    ' + value.preguntas.respuesta4.respuesta +
                        '                                </div>' +
                        '                            </div>' +
