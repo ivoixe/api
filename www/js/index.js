@@ -87,16 +87,24 @@ $(document).ready(function() {
     $( document ).on( 'click','.respuesta.marco', function(e) {
         var res = $(this).attr('res');
         var pre = $(this).attr('pregunta');
+        $('body').append('<div class="no-click"></div>');
+        $('.respuesta.marco.respuesta').css('border','2px solid red');
+        $('.respuesta.marco.respuesta_correcta').css('border','2px solid green');
+
+        setTimeout(function(){
+            $('body').remove('.no-click');
+            pregunta(res,pre);
 
 
-        pregunta(res,pre);
+        }, 3000);
+
         var mensaje = last_ans();
 
        if(mensaje==true){
-           ons.notification.alert('Emaitza');
+          // ons.notification.alert('Emaitza');
            localStorage.setItem('jugando',false);
        }else{
-           ons.notification.alert('Hurrengo galdera');
+           //ons.notification.alert('Hurrengo galdera');
        }
 
     });
@@ -130,6 +138,7 @@ $(document).ready(function() {
     });*/
 
 });
+
 function carga_seccion(){
     $.ajax({
         method: "POST",
@@ -365,6 +374,7 @@ function interactua(categoria){
         }
     });
 }
+
 function carga_preguntas(){
     $.ajax({
         method: "POST",
@@ -412,7 +422,7 @@ function dibuja(){
                        '            <div class="respuestas '+hidden+'">' +
                        '                <ons-row>' +
                        '                    <ons-col   align="center">' +
-                       '                        <div class="respuesta marco"  pregunta="' + value.id + '" res="' + value.preguntas.respuesta1.valor + '"  >' +
+                       '                        <div class="respuesta marco ' + value.preguntas.respuesta1.valor + ' "  pregunta="' + value.id + '" res="' + value.preguntas.respuesta1.valor + '"  >' +
                        '                            <div class="respuesta-content">' +
                        '                                <div class="content text-center">' +
                        '                                    <i class="fas fa-map-marker mark"><span>a</span></i>' +
@@ -422,7 +432,7 @@ function dibuja(){
                        '                        </div> ' +
                        '                    </ons-col> ' +
                        '                    <ons-col >' +
-                       '                        <div class="respuesta marco " pregunta="' + value.id + '" res="' + value.preguntas.respuesta2.valor + '" >' +
+                       '                        <div class="respuesta marco '+value.preguntas.respuesta2.valor +'" pregunta="' + value.id + '" res="' + value.preguntas.respuesta2.valor + '" >' +
                        '                            <div class="respuesta-content">\n' +
                        '                                <div class="content text-center">' +
                        '                                    <i class="fas fa-map-marker mark"><span>b</span></i>' +
@@ -434,7 +444,7 @@ function dibuja(){
                        '                </ons-row>' +
                        '                <ons-row>' +
                        '                    <ons-col   align="center">' +
-                       '                        <div class="respuesta marco"  pregunta="' + value.id + '" res="' + value.preguntas.respuesta3.valor + '"  >' +
+                       '                        <div class="respuesta marco ' + value.preguntas.respuesta3.valor + '"  pregunta="' + value.id + '" res="' + value.preguntas.respuesta3.valor + '"  >' +
                        '                            <div class="respuesta-content">' +
                        '                                <div class="content text-center">' +
                        '                                    <i class="fas fa-map-marker mark"><span>c</span></i>' +
@@ -444,7 +454,7 @@ function dibuja(){
                        '                        </div> ' +
                        '                    </ons-col> ' +
                        '                    <ons-col >' +
-                       '                        <div class="respuesta marco " pregunta="' + value.id + '" res="' + value.preguntas.respuesta4.valor + '" >' +
+                       '                        <div class="respuesta marco '+ value.preguntas.respuesta4.valor + ' " pregunta="' + value.id + '" res="' + value.preguntas.respuesta4.valor + '" >' +
                        '                            <div class="respuesta-content">\n' +
                        '                                <div class="content text-center">' +
                        '                                    <i class="fas fa-map-marker mark"><span>d</span></i>' +
@@ -460,7 +470,7 @@ function dibuja(){
 
             });
             if(contenido){
-                $(document).find('#preguntasContenido').append(contenido);
+                $(document).find('#preguntasContenido').append(contenido).fadeIn(300);
 
             }else{
                var todas_contestadas= comprobar_preguntas();
@@ -583,7 +593,7 @@ function last_ans(){
 function datos_resultado(){
     var todas = localStorage.getItem("todas_preguntas");
     var malas = 0;
-    var num_partidas = 0;
+    var num_partidas = 1;
     var buenas = 0;
     var historial =[];
     var respondidas=0;

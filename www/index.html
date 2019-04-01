@@ -65,6 +65,19 @@
    <script type="text/javascript" src="js/index.js"></script>
    <script type="text/javascript">
        // app.initialize();
+       document.addEventListener("deviceready", onDeviceReady, false);
+
+       function onDeviceReady(){
+           document.addEventListener("backbutton", function(){
+               if(document.getElementById('#home')){
+                   e.preventDefault();
+                   navigator.app.exitApp();
+               }
+               else {
+                   navigator.app.backHistory()
+               }
+           }, false);
+       }
 
 
        window.fn = {};
