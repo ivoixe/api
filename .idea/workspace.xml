@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81a8883e-b2d9-4588-96fe-4e185427c3e2" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/www/css/index.css" afterPath="$PROJECT_DIR$/www/css/index.css" />
+      <change beforePath="$PROJECT_DIR$/www/css/onsen/font_awesome/css/v4-shims.css" afterPath="$PROJECT_DIR$/www/css/onsen/font_awesome/css/v4-shims.css" />
+      <change beforePath="$PROJECT_DIR$/www/css/onsen/font_awesome/css/v4-shims.min.css" afterPath="$PROJECT_DIR$/www/css/onsen/font_awesome/css/v4-shims.min.css" />
       <change beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
       <change beforePath="$PROJECT_DIR$/www/js/index.js" afterPath="$PROJECT_DIR$/www/js/index.js" />
     </list>
@@ -24,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="503">
-              <caret line="514" column="0" lean-forward="true" selection-start-line="514" selection-start-column="0" selection-end-line="514" selection-end-column="0" />
+            <state relative-caret-position="554">
+              <caret line="161" column="69" lean-forward="false" selection-start-line="161" selection-start-column="62" selection-end-line="161" selection-end-column="69" />
               <folding />
             </state>
           </provider>
@@ -44,11 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="453">
-              <caret line="640" column="41" lean-forward="false" selection-start-line="640" selection-start-column="41" selection-end-line="640" selection-end-column="41" />
+            <state relative-caret-position="605">
+              <caret line="480" column="26" lean-forward="true" selection-start-line="480" selection-start-column="26" selection-end-line="480" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -57,8 +61,18 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="775">
-              <caret line="157" column="0" lean-forward="false" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
+            <state relative-caret-position="452">
+              <caret line="517" column="18" lean-forward="true" selection-start-line="517" selection-start-column="18" selection-end-line="517" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://F:/Almacen-Ivo/Trabajos-ivo/app_conecting/www/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="214">
+              <caret line="36" column="84" lean-forward="true" selection-start-line="36" selection-start-column="84" selection-end-line="36" selection-end-column="84" />
               <folding />
             </state>
           </provider>
@@ -67,7 +81,7 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://V:/RE-CONNECTING EUROPE - Extranet 2012/web/privado/alojamientos/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
+            <state relative-caret-position="17">
               <caret line="135" column="0" lean-forward="false" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
               <folding>
                 <marker date="1554196476542" expanded="true" signature="2624:2857" ph="SELECT IT.te... ${$Alojamientostipos-&gt;bd_tabla}" />
@@ -77,20 +91,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="list.php" pinned="false" current-in-tab="false">
-        <entry file="file://V:/RE-CONNECTING EUROPE - Extranet 2012/web/php/scripts/list.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="campos.php" pinned="false" current-in-tab="false">
         <entry file="file://V:/RE-CONNECTING EUROPE - Extranet 2012/web/privado/alojamientos/campos.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="470">
+            <state relative-caret-position="3961">
               <caret line="233" column="0" lean-forward="false" selection-start-line="233" selection-start-column="0" selection-end-line="233" selection-end-column="0" />
               <folding />
             </state>
@@ -101,36 +105,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>aho</find>
-      <find>h1</find>
-      <find>listar</find>
-      <find>carga</find>
-      <find>noti</find>
-      <find>preguntas.php</find>
-      <find>hobe</find>
-      <find>comprobacion</find>
-      <find>no</find>
-      <find>berrir</find>
-      <find>notif</find>
-      <find>hobere</find>
-      <find>resultado</find>
-      <find>30000</find>
-      <find>14</find>
-      <find>min</find>
-      <find>urre</find>
-      <find>pregunta</find>
-      <find>respuesta_correcta</find>
-      <find>red</find>
-      <find>carga_preguntas</find>
-      <find>vacia</find>
-      <find>notifi</find>
       <find>notification</find>
       <find>ready</find>
-      <find>dibuja</find>
-      <find>LOGO</find>
-      <find>preguntas</find>
       <find>carga_preguntas()</find>
       <find>vaciar_juego</find>
+      <find>vacia</find>
+      <find>LOGO</find>
+      <find>preguntas</find>
+      <find>kantrivia</find>
+      <find>ahoul</find>
+      <find>categoria</find>
+      <find>categorias_interactua</find>
+      <find>urre</find>
+      <find>esVacio</find>
+      <find>contenido</find>
+      <find>entz</find>
+      <find>home</find>
+      <find>datas(</find>
+      <find>dibuja</find>
+      <find>load</find>
+      <find>list-filtro</find>
+      <find>ELK</find>
+      <find>result</find>
+      <find>honda</find>
+      <find>ELKA</find>
+      <find>URR</find>
+      <find>aho</find>
+      <find>bold</find>
+      <find>A</find>
+      <find>seccion</find>
+      <find>article</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -152,12 +156,12 @@
         <option value="V:/PRISMA - APP KANTAUR - WEB 2019/web/scripts/conexiones_app/seccion.php" />
         <option value="V:/PRISMA - APP KANTAUR - WEB 2019/web/scripts/conexiones_app/preguntas.php" />
         <option value="$PROJECT_DIR$/config.xml" />
-        <option value="$PROJECT_DIR$/www/css/index.css" />
         <option value="V:/RE-CONNECTING EUROPE - Extranet 2012/web/privado/alojamientos/campos.php" />
         <option value="V:/RE-CONNECTING EUROPE - Extranet 2012/web/php/scripts/list.php" />
         <option value="V:/RE-CONNECTING EUROPE - Extranet 2012/web/privado/alojamientos/index.php" />
         <option value="$PROJECT_DIR$/www/index.html" />
         <option value="$PROJECT_DIR$/www/js/index.js" />
+        <option value="$PROJECT_DIR$/www/css/index.css" />
       </list>
     </option>
   </component>
@@ -196,7 +200,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="last_opened_file_path" value="F:/Almacen-Ivo/Trabajos-ivo/app_conecting" />
+    <property name="last_opened_file_path" value="F:/Almacen-Ivo/Trabajos-ivo/app_conecting/www/index.html" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RunDashboard">
@@ -248,11 +252,12 @@
       <workItem from="1554104335377" duration="5423000" />
       <workItem from="1554125927406" duration="2908000" />
       <workItem from="1554185823966" duration="1121000" />
+      <workItem from="1554211483464" duration="3518000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="204415000" />
+    <option name="totallyTimeSpent" value="216770000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1296" height="1010" extended-state="6" />
@@ -297,21 +302,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://V:/easvele - web 2017/web/temas/easvele/css/estilos.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50864">
-          <caret line="2992" column="26" lean-forward="false" selection-start-line="2992" selection-start-column="26" selection-end-line="2992" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1241">
-          <caret line="73" column="41" lean-forward="true" selection-start-line="73" selection-start-column="41" selection-end-line="73" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -522,17 +512,9 @@
     <entry file="file://$PROJECT_DIR$/../../web/scripts/conexiones_app/seccion.php" />
     <entry file="file://$PROJECT_DIR$/../../web/scripts/conexiones_app/detalle.php" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/error_log" />
-    <entry file="file://$PROJECT_DIR$/www/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="640" column="41" lean-forward="false" selection-start-line="640" selection-start-column="41" selection-end-line="640" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://V:/RE-CONNECTING EUROPE - Extranet 2012/web/privado/alojamientos/campos.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
+        <state relative-caret-position="3961">
           <caret line="233" column="0" lean-forward="false" selection-start-line="233" selection-start-column="0" selection-end-line="233" selection-end-column="0" />
           <folding />
         </state>
@@ -542,7 +524,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -554,13 +535,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://V:/RE-CONNECTING EUROPE - Extranet 2012/web/privado/alojamientos/index.php">
+    <entry file="file://F:/Almacen-Ivo/Trabajos-ivo/app_conecting/www/js/funciones.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="135" column="0" lean-forward="false" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
+        <state relative-caret-position="612">
+          <caret line="657" column="52" lean-forward="false" selection-start-line="657" selection-start-column="52" selection-end-line="657" selection-end-column="52" />
           <folding>
-            <marker date="1554196476542" expanded="true" signature="2624:2857" ph="SELECT IT.te... ${$Alojamientostipos-&gt;bd_tabla}" />
-            <marker date="1554196476542" expanded="true" signature="9772:10130" ph="SELECT AT.id... ${$Alojamientostipos-&gt;bd_tabla}" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -575,16 +555,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="775">
-          <caret line="157" column="0" lean-forward="false" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
+        <state relative-caret-position="452">
+          <caret line="517" column="18" lean-forward="true" selection-start-line="517" selection-start-column="18" selection-end-line="517" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://V:/RE-CONNECTING EUROPE - Extranet 2012/web/privado/alojamientos/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="135" column="0" lean-forward="false" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
+          <folding>
+            <marker date="1554196476542" expanded="true" signature="2624:2857" ph="SELECT IT.te... ${$Alojamientostipos-&gt;bd_tabla}" />
+            <marker date="1554196476542" expanded="true" signature="9772:10130" ph="SELECT AT.id... ${$Alojamientostipos-&gt;bd_tabla}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/Almacen-Ivo/Trabajos-ivo/app_conecting/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="36" column="84" lean-forward="true" selection-start-line="36" selection-start-column="84" selection-end-line="36" selection-end-column="84" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="514" column="0" lean-forward="true" selection-start-line="514" selection-start-column="0" selection-end-line="514" selection-end-column="0" />
+        <state relative-caret-position="554">
+          <caret line="161" column="69" lean-forward="false" selection-start-line="161" selection-start-column="62" selection-end-line="161" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="605">
+          <caret line="480" column="26" lean-forward="true" selection-start-line="480" selection-start-column="26" selection-end-line="480" selection-end-column="26" />
           <folding />
         </state>
       </provider>

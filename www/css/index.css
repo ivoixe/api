@@ -37,7 +37,7 @@
     url('onsen/font/Rajdhani-Light.woff') format('woff'),
     url('onsen/font/Rajdhani-Light.svg#Rajdhani-Light') format('svg');
     font-weight: 300;
-    font-style: normal;
+    font-style: light;
 }
 @font-face {
     font-family: 'Rajdhani-Semibold';
@@ -57,7 +57,7 @@
     url('onsen/font/Rajdhani-bold.woff') format('woff'),
     url('onsen/font/Rajdhani-bold.svg#Rajdhani-Light') format('svg');
     font-weight: 700;
-    font-style: normal;
+    font-style: bold;
 }
 @font-face {
     font-family: 'Rajdhani-medium';
@@ -67,7 +67,7 @@
     url('onsen/font/Rajdhani-Medium.woff') format('woff'),
     url('onsen/font/Rajdhani-Medium.svg#Rajdhani-Light') format('svg');
     font-weight: 500;
-    font-style: normal;
+    font-style: medium;
 }
 
 .page--material, .page--material__content{
@@ -431,14 +431,20 @@ ons-select i{
     background:#fff;
     border:none;
 }
-#main-hondakinak .content-content ons-row{
+#main-hondakinak .content-content article{
     background: #d7d7d7;
     padding:10px;
     margin-bottom:10px;
     border-radius:4px;
 }
-#main-hondakinak .content-content ons-col.texto{
+#main-hondakinak .texto p{
+    font-size:20px;
+    font-family: 'Rajdhani' !important;
+}
+#main-hondakinak .content-content ons-col .texto{
     padding-left: 24px;
+    font-size:20px;
+    font-family: 'Rajdhani-Semibold';
 }
 #main-hondakinak .content-content ons-col .imagen{
     background: #1a7bc1;
@@ -460,12 +466,18 @@ ons-select i{
         line-height:25px;
     }
 }
-#main-aholkuak .textos{
-    text-align: left;
+#main-aholkuak .textos p{
+    text-align: center;
     mergin-top:20px;
     font-size:14px;
-}
 
+}
+#main-aholkuak .content-content article{
+    background: #d7d7d7;
+    padding:10px;
+    margin-bottom:10px;
+    border-radius:4px;
+}
 #main-aholkuak .textos ol{
     padding-left:0;
     margin-left:15px;

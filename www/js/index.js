@@ -87,7 +87,7 @@ $(document).ready(function() {
     $( document ).on( 'click','.respuesta.marco', function(e) {
         var res = $(this).attr('res');
         var pre = $(this).attr('pregunta');
-        $('body').append('<div class="no-click"><ons-progress-circular indeterminate>Urrengo galdera</ons-progress-circular></div>');
+        $('body').append('<div class="no-click"><ons-progress-circular indeterminate>Hurrengo galdera</ons-progress-circular></div>');
 
         $('.respuesta.marco.respuesta').css('border','2px solid red');
         $('.respuesta.marco.respuesta_correcta').css('border','2px solid green');
@@ -117,8 +117,9 @@ $(document).ready(function() {
 
 
 
-    $( document ).on('change','#choose-sel select',function() {
-        datas('no',$(this).val(),'no');
+    $( document ).on('click','#main-enciclopedia .content-select ons-list-item',function() {
+        var id_fil= $(this).attr('rel');
+        datas('no',id_fil,'no');
     });
 
    /* setTimeout(function() {
@@ -144,9 +145,34 @@ function carga_seccion(){
         data: ({id_sec:'4'}),
         dataType: "json",
         success: function(resultado){
-            $('#main-aholkuak h1 span').text(resultado.titulo);
-            $('#main-aholkuak .textos').html(resultado.descripcion);
-            $('#main-aholkuak .imagen img').attr('src',resultado.imagen.imagen);
+            $.each(resultado, function(k,v) {
+
+                //onclick="fn.load('detalle.html')"
+                /*     <img src="mini.jpg" width="200" height="200"
+         class="reel"
+         id="image"
+         data-images="mini/###.jpg"
+         data-frames="20"
+         data-frame="14"
+         data-rows="6"
+         data-row="3"
+         data-speed="0.3">>*/
+
+
+                $('#main-aholkuak .content-content').append('<article><ons-row >' +
+                    '                        <ons-col class="left"  id="urlcute" align="center">' +
+                    '                            <div class="imagen  result  ">' +
+                    '                                <img  id="image_1" class=" img-responsive" src="'+v.imagen+'"  >' +
+                    '                            </div> </ons-row><ons-row>' +
+                    '                        </ons-col>' +
+                    '                        <ons-col class="texto">' +
+                    '                            <p>'+v.titulo+'</p>' +
+                    '                        </ons-col>' +
+                    '                    </ons-row></article>'
+                );
+
+
+            });
         },
         error: function(){
 
@@ -174,16 +200,16 @@ function consejos(){
       data-speed="0.3">>*/
 
 
-               $('#main-hondakinak .content-content').append('<ons-row >' +
+               $('#main-hondakinak .content-content').append('<article><ons-row >' +
                     '                        <ons-col class="left"  id="urlcute" align="center">' +
                     '                            <div class="imagen  result  ">' +
                     '                                <img  id="image_1" class=" img-responsive" src="'+v.imagen+'"  >' +
-                    '                            </div>' +
+                    '                            </div> </ons-row><ons-row>' +
                     '                        </ons-col>' +
                     '                        <ons-col class="texto">' +
                     '                            <p>'+v.titulo+'</p>' +
                     '                        </ons-col>' +
-                    '                    </ons-row>'
+                    '                    </ons-row></article>'
                 );
 
 
@@ -201,12 +227,14 @@ function categorias(){
         data: ({id:'3'}),
         dataType: "json",
         success: function(resp){
+            var contenido="<ons-list>";
+            var page= "'entziklopedia-filtro.html'";
             $.each(resp.categorias, function(k,v) {
-                $('#choose-sel select').append($('<option>', {
-                    value: v.id,
-                    text: v.titulo
-                }));
+                contenido +='<ons-list-item rel="'+v.id+'" onclick="fn.load('+page+')">'+v.titulo+'</ons-list-item>';
+
             });
+            contenido +="</ons-list>";
+            $('#main-enciclopedia .content-select').append(contenido);
         },
         error: function(){
 
