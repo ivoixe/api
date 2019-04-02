@@ -145,7 +145,13 @@
                    window.navigator.app.backHistory()
                }*/
             
-                alert(document.getElementById('#main-menu'));
+                window.fn.load = function(page) {
+                  var content = document.getElementById('content');
+                 var menu = document.getElementById('menu');
+                  content.load(page)
+                    .then(menu.close.bind(menu));
+                  alert(content.page);
+                };
                //window.navigator.app.exitApp();
            }, false);
            /********************************/
