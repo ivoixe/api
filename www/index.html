@@ -135,7 +135,7 @@
            /********************************/
            ons.disableDeviceBackButtonHandler();
            document.addEventListener("backbutton", function(){
-               if(document.getElementById('#home')){
+               /*if(document.getElementById('#home')){
                    alert("HOME");
                    e.preventDefault();
                    window.navigator.app.exitApp();
@@ -143,7 +143,8 @@
                else {
                    alert("!= HOME");
                    window.navigator.app.backHistory()
-               }
+               }*/
+               window.navigator.app.exitApp();
            }, false);
            /********************************/
            $( document ).on( 'click','.berri', function() {
@@ -305,7 +306,7 @@
 
 <template id="detalle.html">
 
-    <ons-page on-device-backbutton="fn.load('home.html')">
+    <ons-page>
 
         <ons-toolbar>
 
@@ -366,7 +367,7 @@
 
 <template id="entziklopedia.html">
 
-    <ons-page on-device-backbutton="fn.load('home.html')">
+    <ons-page>
 
 
         <ons-toolbar>
@@ -411,7 +412,7 @@
 </template>
 <template id="interactua.html">
 
-    <ons-page on-device-backbutton="fn.load('home.html')">
+    <ons-page>
 
         <ons-toolbar>
 
@@ -461,7 +462,7 @@
 </template>
 <template id="aholkuak.html">
 
-    <ons-page on-device-backbutton="fn.load('home.html')">
+    <ons-page>
 
         <ons-toolbar>
 
@@ -499,7 +500,7 @@
 
 <template id="hondakinak.html">
 
-    <ons-page on-device-backbutton="fn.load('home.html')">
+    <ons-page>
 
 
         <ons-toolbar>
@@ -535,7 +536,7 @@
 
 <template id="kantrivia.html">
 
-    <ons-page on-device-backbutton="fn.load('home.html')">
+    <ons-page>
         <ons-toolbar>
             <div class="left">
 
@@ -561,7 +562,7 @@
 </template>
 <template id="resultado.html">
 
-    <ons-page on-device-backbutton="fn.load('home.html')">
+    <ons-page>
         <ons-toolbar>
             <div class="left">
 
