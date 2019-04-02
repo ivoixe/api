@@ -69,7 +69,6 @@
 
        function onDeviceReady(){
            document.addEventListener("backbutton", function(){
-               alert('device ready ');
                if(document.getElementById('#home')){
                    e.preventDefault();
                    navigator.app.exitApp();
@@ -304,7 +303,7 @@
 
 <template id="detalle.html">
 
-    <ons-page>
+    <ons-page on-device-backbutton="fn.load('home.html')">
 
         <ons-toolbar>
 
@@ -365,7 +364,7 @@
 
 <template id="entziklopedia.html">
 
-    <ons-page>
+    <ons-page on-device-backbutton="fn.load('home.html')">
 
 
         <ons-toolbar>
@@ -410,7 +409,7 @@
 </template>
 <template id="interactua.html">
 
-    <ons-page>
+    <ons-page on-device-backbutton="fn.load('home.html')">
 
         <ons-toolbar>
 
@@ -460,7 +459,7 @@
 </template>
 <template id="aholkuak.html">
 
-    <ons-page>
+    <ons-page on-device-backbutton="fn.load('home.html')">
 
         <ons-toolbar>
 
@@ -498,7 +497,7 @@
 
 <template id="hondakinak.html">
 
-    <ons-page>
+    <ons-page on-device-backbutton="fn.load('home.html')">
 
 
         <ons-toolbar>
@@ -534,7 +533,7 @@
 
 <template id="kantrivia.html">
 
-    <ons-page>
+    <ons-page on-device-backbutton="fn.load('home.html')">
         <ons-toolbar>
             <div class="left">
 
@@ -560,7 +559,7 @@
 </template>
 <template id="resultado.html">
 
-    <ons-page>
+    <ons-page on-device-backbutton="fn.load('home.html')">
         <ons-toolbar>
             <div class="left">
 
@@ -624,4 +623,4 @@
 </template>
 </body>
 
-</html>                         
+</html>�������������������������
