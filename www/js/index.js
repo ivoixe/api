@@ -166,7 +166,8 @@ function carga_seccion(){
                     '                            </div> </ons-row><ons-row>' +
                     '                        </ons-col>' +
                     '                        <ons-col class="texto">' +
-                    '                            <p>'+v.titulo+'</p>' +
+                    '                            <h2>'+v.titulo+'</h2>' +
+                    '                            <p>'+v.descripcion+'</p>' +
                     '                        </ons-col>' +
                     '                    </ons-row></article>'
                 );
@@ -207,7 +208,7 @@ function consejos(){
                     '                            </div> </ons-row><ons-row>' +
                     '                        </ons-col>' +
                     '                        <ons-col class="texto">' +
-                    '                            <p>'+v.titulo+'</p>' +
+                    '                            <h2>'+v.titulo+'</h2>' +
                     '                        </ons-col>' +
                     '                    </ons-row></article>'
                 );
