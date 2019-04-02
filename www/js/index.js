@@ -87,13 +87,13 @@ $(document).ready(function() {
     $( document ).on( 'click','.respuesta.marco', function(e) {
         var res = $(this).attr('res');
         var pre = $(this).attr('pregunta');
-        $('body').append('<div class="no-click"></div>');
+        $('body').append('<div class="no-click"><ons-progress-circular indeterminate></ons-progress-circular></div>');
         $('.respuesta.marco.respuesta').css('border','2px solid red');
         $('.respuesta.marco.respuesta_correcta').css('border','2px solid green');
 
         setTimeout(function(){
             pregunta(res,pre);
-            $('body').remove('.no-click');
+            $(document).find('body .no-click').remove();
 
 
         }, 3000);
