@@ -138,11 +138,11 @@
                if(document.getElementById('#home')){
                    alert("HOME");
                    e.preventDefault();
-                   navigator.app.exitApp();
+                   window.navigator.app.exitApp();
                }
                else {
                    alert("!= HOME");
-                   navigator.app.backHistory()
+                   window.navigator.app.backHistory()
                }
            }, false);
            /********************************/
