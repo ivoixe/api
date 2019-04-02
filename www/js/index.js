@@ -92,8 +92,8 @@ $(document).ready(function() {
         $('.respuesta.marco.respuesta_correcta').css('border','2px solid green');
 
         setTimeout(function(){
-            $('body').remove('.no-click');
             pregunta(res,pre);
+            $('body').remove('.no-click');
 
 
         }, 3000);
