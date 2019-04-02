@@ -500,7 +500,6 @@ function dibuja(){
 }
 
 function vaciar_juego(){
-    var todas = localStorage.getItem("todas_preguntas");
 
     $.ajax({
         url:location.href,
@@ -510,7 +509,7 @@ function vaciar_juego(){
             var content = document.getElementById('content');
             var todas = localStorage.getItem("todas_preguntas");
             $.each( JSON.parse(todas), function( key, value ) {
-               // console.log(localStorage.getItem("pregunta"+value.id));
+                console.log(localStorage.getItem("pregunta"+value.id));
                 localStorage.removeItem("pregunta"+value.id);
             });
 
