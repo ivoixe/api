@@ -69,6 +69,7 @@
 
        function onDeviceReady(){
            document.addEventListener("backbutton", function(){
+               alert('device ready ');
                if(document.getElementById('#home')){
                    e.preventDefault();
                    navigator.app.exitApp();
@@ -91,23 +92,23 @@
            consejos();
            carga_seccion();
            //interactua();
-
-           vaciar_juego();
-           carga_preguntas();
            if(page =="detalle.html"){
                 datas_detalle(null);
            }
            if(page =="kantrivia.html"){
-               vaciar_juego();
-               carga_preguntas();
-
+              // vaciar_juego();
+               vaciar_juego(); carga_preguntas();
+               dibuja();
                var comprobacion = comprobar_preguntas();
                if(comprobacion==true){
                   page="resultado.html";
-               }else{
-                   vaciar_juego();
-                   dibuja();
                }
+               var algo= $(document).find('.pregunta.marco').length;
+
+
+
+
+
            }
            if(page =="resultado.html"){
                var comprobacion = comprobar_preguntas();
@@ -130,9 +131,18 @@
 
        };
 
+
        ons.ready(function() {
            /********************************/
-
+           document.addEventListener("backbutton", function(){
+               if(document.getElementById('#home')){
+                   e.preventDefault();
+                   navigator.app.exitApp();
+               }
+               else {
+                   navigator.app.backHistory()
+               }
+           }, false);
            /********************************/
            $( document ).on( 'click','.berri', function() {
                vaciar_juego();

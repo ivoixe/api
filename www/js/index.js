@@ -87,15 +87,14 @@ $(document).ready(function() {
     $( document ).on( 'click','.respuesta.marco', function(e) {
         var res = $(this).attr('res');
         var pre = $(this).attr('pregunta');
-        $('body').append('<div class="no-click"><ons-progress-circular indeterminate></ons-progress-circular></div>');
+        $('body').append('<div class="no-click"><ons-progress-circular indeterminate>Urrengo galdera</ons-progress-circular></div>');
+
         $('.respuesta.marco.respuesta').css('border','2px solid red');
         $('.respuesta.marco.respuesta_correcta').css('border','2px solid green');
 
         setTimeout(function(){
             pregunta(res,pre);
             $(document).find('body .no-click').remove();
-
-
         }, 3000);
 
         var mensaje = last_ans();
@@ -110,7 +109,6 @@ $(document).ready(function() {
     });
     $( document ).on( 'change','#choose-sel-interactua select', function(e) {
             var carga = $(this).val();
-
             interactua(carga);
     });
 
@@ -407,6 +405,7 @@ function dibuja(){
                 var pregunta_contestada = localStorage.getItem("pregunta"+value.id);
 
                 hidden='';
+
                if(!pregunta_contestada) {
                     if(index != 1){
                         hidden='hidden';
@@ -514,7 +513,7 @@ function vaciar_juego(){
                // console.log(localStorage.getItem("pregunta"+value.id));
                 localStorage.removeItem("pregunta"+value.id);
             });
-           // dibuja();
+
         },
         error: function(e){
             alert('error'+e.status);
@@ -689,6 +688,7 @@ function pregunta(res,id_pregunta){
      var preguntas = [];
       preguntas[id_pregunta] = res;
     localStorage.setItem("pregunta"+id_pregunta, JSON.stringify(res));
+
     dibuja();
    var  veo = JSON.parse(localStorage.getItem("pregunta"+id_pregunta));
     //console.log(typeof veo); //object
