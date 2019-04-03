@@ -69,6 +69,11 @@
 
        function onDeviceReady(){
            navigator.splashscreen.show();
+           if (navigator.splashscreen){
+               setTimeout(function() {
+                navigator.splashscreen.hide();
+            }, 2000);
+           }
            document.addEventListener("backbutton", function(){
                if(document.getElementById('#home')){
                    e.preventDefault();
