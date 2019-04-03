@@ -271,8 +271,12 @@ p,ul li,a,strong,h3,h2{
 }
 .content-listado ons-col{
     text-align: center !important;
-    margin-bottom:30px;
-        max-width: 50%;
+    margin-bottom: 30px;
+    max-width: 43vw;
+    flex: 1 1 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
 }
 .content-listado h2{
     color:#1a191d;
