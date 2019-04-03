@@ -217,7 +217,6 @@ function consejos(){
             });
         },
         error: function(){
-
         }
     });
 }
