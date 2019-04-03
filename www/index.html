@@ -85,7 +85,7 @@
            var menu = document.getElementById('menu');
            menu.open();
        };
-       window.fn.load = function(page) {
+   /*    window.fn.load = function(page) {
            var content = document.getElementById('content');
            categorias_interactua();
            categorias();
@@ -104,10 +104,6 @@
                   page="resultado.html";
                }
                var algo= $(document).find('.pregunta.marco').length;
-
-
-
-
 
            }
            if(page =="resultado.html"){
@@ -129,9 +125,19 @@
                );
 
 
-       };
+       };*/
 
+       document.addEventListener('init', function(event) {
+           var page = event.target;
 
+           if (page.id === 'page1') {
+               page.querySelector('#push-button').onclick = function() {
+                   document.querySelector('#myNavigator').pushPage('page2.html', {data: {title: 'Page 2'}});
+               };
+           } else if (page.id === 'page2') {
+               page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
+           }
+       });
        ons.ready(function() {
            /********************************/
            ons.disableDeviceBackButtonHandler();

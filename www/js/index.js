@@ -671,7 +671,9 @@ function datos_resultado(){
         });
 
 
-
+    if(!historial){
+        suma_media =res_num;
+    }
     var media = suma_media/num_partidas ;
     var n = media.toFixed(1);
     var texto ="";

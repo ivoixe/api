@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="81a8883e-b2d9-4588-96fe-4e185427c3e2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/config.xml" afterPath="$PROJECT_DIR$/config.xml" />
       <change beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
       <change beforePath="$PROJECT_DIR$/www/js/index.js" afterPath="$PROJECT_DIR$/www/js/index.js" />
     </list>
@@ -19,7 +18,7 @@
       <file leaf-file-name="preguntas.php" pinned="false" current-in-tab="false">
         <entry file="file://V:/PRISMA - APP KANTAUR - WEB 2019/web/scripts/conexiones_app/preguntas.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
+            <state relative-caret-position="306">
               <caret line="18" column="100" lean-forward="false" selection-start-line="18" selection-start-column="100" selection-end-line="18" selection-end-column="100" />
               <folding />
             </state>
@@ -29,8 +28,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="218" column="26" lean-forward="false" selection-start-line="218" selection-start-column="26" selection-end-line="218" selection-end-column="26" />
+            <state relative-caret-position="265">
+              <caret line="684" column="32" lean-forward="true" selection-start-line="684" selection-start-column="32" selection-end-line="684" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -49,7 +48,7 @@
       <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
+            <state relative-caret-position="1904">
               <caret line="112" column="43" lean-forward="false" selection-start-line="112" selection-start-column="32" selection-end-line="112" selection-end-column="43" />
               <folding />
             </state>
@@ -59,18 +58,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://F:/Almacen-Ivo/Trabajos-ivo/app_conecting/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="519" column="14" lean-forward="false" selection-start-line="519" selection-start-column="14" selection-end-line="519" selection-end-column="14" />
+            <state relative-caret-position="1003">
+              <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -79,7 +68,7 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://V:/RE-CONNECTING EUROPE - Extranet 2012/web/privado/alojamientos/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
+            <state relative-caret-position="2295">
               <caret line="135" column="0" lean-forward="false" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
               <folding>
                 <marker date="1554196476542" expanded="true" signature="2624:2857" ph="SELECT IT.te... ${$Alojamientostipos-&gt;bd_tabla}" />
@@ -103,7 +92,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>notification</find>
       <find>ready</find>
       <find>carga_preguntas()</find>
       <find>vaciar_juego</find>
@@ -133,6 +121,7 @@
       <find>A</find>
       <find>article</find>
       <find>seccion</find>
+      <find>part</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -158,8 +147,8 @@
         <option value="V:/RE-CONNECTING EUROPE - Extranet 2012/web/privado/alojamientos/index.php" />
         <option value="$PROJECT_DIR$/www/css/index.css" />
         <option value="$PROJECT_DIR$/config.xml" />
-        <option value="F:/Almacen-Ivo/Trabajos-ivo/app_conecting/www/index.html" />
         <option value="$PROJECT_DIR$/www/index.html" />
+        <option value="F:/Almacen-Ivo/Trabajos-ivo/app_conecting/www/index.html" />
         <option value="$PROJECT_DIR$/www/js/index.js" />
       </list>
     </option>
@@ -252,12 +241,13 @@
       <workItem from="1554125927406" duration="2908000" />
       <workItem from="1554185823966" duration="1121000" />
       <workItem from="1554211483464" duration="3754000" />
-      <workItem from="1554271758332" duration="1415000" />
+      <workItem from="1554271758332" duration="2742000" />
+      <workItem from="1554284075407" duration="1552000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="218421000" />
+    <option name="totallyTimeSpent" value="221300000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1296" height="1010" extended-state="6" />
@@ -539,7 +529,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
+        <state relative-caret-position="1904">
           <caret line="112" column="43" lean-forward="false" selection-start-line="112" selection-start-column="32" selection-end-line="112" selection-end-column="43" />
           <folding />
         </state>
@@ -547,23 +537,15 @@
     </entry>
     <entry file="file://V:/PRISMA - APP KANTAUR - WEB 2019/web/scripts/conexiones_app/preguntas.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
+        <state relative-caret-position="306">
           <caret line="18" column="100" lean-forward="false" selection-start-line="18" selection-start-column="100" selection-end-line="18" selection-end-column="100" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://F:/Almacen-Ivo/Trabajos-ivo/app_conecting/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://V:/RE-CONNECTING EUROPE - Extranet 2012/web/privado/alojamientos/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
+        <state relative-caret-position="2295">
           <caret line="135" column="0" lean-forward="false" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
           <folding>
             <marker date="1554196476542" expanded="true" signature="2624:2857" ph="SELECT IT.te... ${$Alojamientostipos-&gt;bd_tabla}" />
@@ -582,16 +564,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="519" column="14" lean-forward="false" selection-start-line="519" selection-start-column="14" selection-end-line="519" selection-end-column="14" />
+        <state relative-caret-position="-2237">
+          <caret line="142" column="48" lean-forward="false" selection-start-line="142" selection-start-column="48" selection-end-line="142" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/Almacen-Ivo/Trabajos-ivo/app_conecting/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1003">
+          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="218" column="26" lean-forward="false" selection-start-line="218" selection-start-column="26" selection-end-line="218" selection-end-column="26" />
+        <state relative-caret-position="265">
+          <caret line="684" column="32" lean-forward="true" selection-start-line="684" selection-start-column="32" selection-end-line="684" selection-end-column="32" />
           <folding />
         </state>
       </provider>
