@@ -24,18 +24,14 @@
         <icon density="xhdpi" src="res/icon/android/drawable-xhdpi-icon.png" />
         <icon density="xxhdpi" src="res/icon/android/drawable-xxhdpi-icon.png" />
         <icon density="xxxhdpi" src="res/icon/android/drawable-xxxhdpi-icon.png" />
-        <splash density="land-ldpi" src="www/img/splash/fondo.png" />
-        <splash density="land-mdpi" src="www/img/splash/fondo.png" />
-        <splash density="land-hdpi" src="www/img/splash/fondo.png" />
-        <splash density="land-xhdpi" src="www/img/splash/fondo.png" />
-        <splash density="land-xxhdpi" src="www/img/splash/fondo.png" />
-        <splash density="land-xxxhdpi" src="www/img/splash/fondo.png" />
-        <splash density="port-ldpi" src="www/img/splash/fondo.png" />
-        <splash density="port-mdpi" src="www/img/splash/fondo.png" />
-        <splash density="port-hdpi" src="www/img/splash/fondo.png" />
-        <splash density="port-xhdpi" src="www/img/splash/fondo.png" />
-        <splash density="port-xxhdpi" src="www/img/splash/fondo.png" />
-        <splash density="port-xxxhdpi" src="www/img/splash/fondo.png" />
+        <splash src="res/res-land-hdpi/screen.png" density="land-hdpi"/>
+        <splash src="res/res-land-ldpi/screen.png" density="land-ldpi"/>
+        <splash src="res/res-land-mdpi/screen.png" density="land-mdpi"/>
+        <splash src="res/res-land-xhdpi/screen.png" density="land-xhdpi"/>
+        <splash src="res/res-port-hdpi/screen.png" density="port-hdpi"/>
+        <splash src="res/res-port-ldpi/screen.png" density="port-ldpi"/>
+        <splash src="res/res-port-mdpi/screen.png" density="port-mdpi"/>
+        <splash src="res/res-port-xhdpi/screen.png" density="port-xhdpi"/>
     </platform>
     <access origin="*" />
     <allow-intent href="http://*/*" />
