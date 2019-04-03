@@ -136,15 +136,13 @@
            /********************************/
            ons.disableDeviceBackButtonHandler();
            document.addEventListener("backbutton", function(){
-              /* if(document.getElementById('#home')){
+               if(content.page == "home.html"){
                    e.preventDefault();
                    window.navigator.app.exitApp();
                }
                else {
-                   window.navigator.app.backHistory()
-               }*/
-               alert(content.page);
-               //window.navigator.app.exitApp();
+                   window.fn.load('home.html');
+               }
            }, false);
            /********************************/
            $( document ).on( 'click','.berri', function() {
