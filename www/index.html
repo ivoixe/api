@@ -141,7 +141,12 @@
                    window.navigator.app.exitApp();
                }
                else {
-                   window.fn.load('home.html');
+                   if(content.page == "detalle.html"){
+                       window.fn.load('entziklopedia.html');
+                   } else {
+                       window.fn.load('home.html');
+                   }
+                   
                }
            }, false);
            /********************************/
