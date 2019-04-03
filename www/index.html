@@ -69,7 +69,6 @@
 
        function onDeviceReady(){
            document.addEventListener("backbutton", function(){
-               alert('device ready ');
                if(document.getElementById('#home')){
                    e.preventDefault();
                    navigator.app.exitApp();
@@ -87,6 +86,7 @@
            menu.open();
        };
        window.fn.load = function(page) {
+           var content = document.getElementById('content');
            categorias_interactua();
            categorias();
            consejos();
@@ -136,13 +136,15 @@
            /********************************/
            ons.disableDeviceBackButtonHandler();
            document.addEventListener("backbutton", function(){
-               if(document.getElementById('#home')){
+              /* if(document.getElementById('#home')){
                    e.preventDefault();
-                   navigator.app.exitApp();
+                   window.navigator.app.exitApp();
                }
                else {
-                   navigator.app.backHistory()
-               }
+                   window.navigator.app.backHistory()
+               }*/
+               alert(content.page);
+               //window.navigator.app.exitApp();
            }, false);
            /********************************/
            $( document ).on( 'click','.berri', function() {
@@ -651,4 +653,4 @@
 </template>
 </body>
 
-</html>                         
+</html>
