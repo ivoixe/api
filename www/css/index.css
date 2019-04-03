@@ -332,7 +332,18 @@ p,ul li,a,strong,h3,h2{
     -o-transform: translate3d(-50%, -50%,0);
     -moz-transform: translate(-50%, -50%);
     font-size:130px;
+    text-shadow: 0px 6px 5px rgba(8,73,126,0.7);
+    -webkit-text-stroke-color: #f4d3a9;
+    -webkit-text-stroke-width: 4px;
+    background: -webkit-linear-gradient(#2462a1, #1c436a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
+
+#main-menu ons-col i.fa-yelp{
+    -webkit-text-stroke-width: 1px;
+}
+
 @media(max-width: 480px){
     #main-menu ons-col i{
         font-size:107px;
@@ -347,6 +358,12 @@ p,ul li,a,strong,h3,h2{
         font-size:65px;
     }
 }
+
+#main-menu ons-col p {
+    color: white;
+    text-shadow: 2px 2px 0 #015691, -1px -1px 0 #015691, 1px -1px 0 #015691, -1px 1px 0 #015691, 1px 1px 0 #015691, 1px 1px 10px #015691;
+}
+
 /**********ENCICLOPEDIA**********************/
 .content-imagen{
     position: relative;
@@ -528,6 +545,8 @@ ons-select i{
     z-index: 2;
     color: #fff;
     width: 100%;
+    top:3px;
+    text-transform: uppercase;
 }
 #main-kantrivia .content{
     background:#fff;
