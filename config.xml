@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.phonegap.kantaur" version="6" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>KANTAUR</name>
+<widget id="com.kantaur.app" version="6" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Kantaur</name>
     <description>
-      KANTAUR APP
+      Kantaur APP
     </description>
     <author email="ivonne@prismacm.com" href="http://app.kantaur.com">
     </author>
