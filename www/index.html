@@ -137,6 +137,7 @@
            ons.disableDeviceBackButtonHandler();
            document.addEventListener("backbutton", function(){
                if(content.page == "home.html"){
+                   alert("home");
                    e.preventDefault();
                    window.navigator.app.exitApp();
                }
