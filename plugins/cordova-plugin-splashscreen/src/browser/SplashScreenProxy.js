@@ -25,8 +25,9 @@ var splashImageHeight = 200;
 var position = { x: 0, y: 0, width: splashImageWidth, height: splashImageHeight }; 
 var localSplash; // the image to display
 var localSplashImage;
+var spinner;
 var bgColor = "#464646";
-var imageSrc = '/img/logo.png';
+var imageSrc = '/img/fondo.png';
 var splashScreenDelay = 3000; // in milliseconds
 var showSplashScreen = true; // show splashcreen by default
 var cordova = require('cordova');
@@ -41,12 +42,20 @@ function updateImageLocation() {
     localSplash.style.top = "0px";
     localSplash.style.left = "0px";
 
-    localSplashImage.style.top = "50%";
-    localSplashImage.style.left = "50%";
-    localSplashImage.style.height = position.height + "px";
-    localSplashImage.style.width = position.width + "px";
-    localSplashImage.style.marginTop = (-position.height / 2) + "px";
-    localSplashImage.style.marginLeft = (-position.width / 2) + "px";
+    localSplashImage.style.top = "0px";
+    localSplashImage.style.left = "unset";
+    localSplashImage.style.height = '100vh';
+    localSplashImage.style.width = '100vw';
+    localSplashImage.style.marginTop = "unset";
+    localSplashImage.style.marginLeft = "unset";
+    
+    spinner.style.position = "absolute";
+    spinner.style.bottom = "45px";
+    spinner.style.left = "47%";
+    spinner.style.fontSize = "30px";
+    spinner.style.color = "#fff";
+    spinner.style.zIndex = "100";
+    
 }
 
 function onResize() {
@@ -70,9 +79,13 @@ var SplashScreen = {
             localSplashImage = document.createElement("img");
             localSplashImage.src = imageSrc;
             localSplashImage.style.position = "absolute";
+            
+            spinner = document.createElement("i");
+            spinner.className = "fas fa-spinner fa-pulse";
 
             updateImageLocation();
 
+            localSplash.appendChild(spinner);
             localSplash.appendChild(localSplashImage);
             document.body.appendChild(localSplash);
         }
