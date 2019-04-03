@@ -22,14 +22,25 @@
         <icon density="xhdpi" src="res/icon/android/drawable-xhdpi-icon.png" />
         <icon density="xxhdpi" src="res/icon/android/drawable-xxhdpi-icon.png" />
         <icon density="xxxhdpi" src="res/icon/android/drawable-xxxhdpi-icon.png" />
-        <splash src="res/screen/android/splash-land-hdpi.png" density="land-hdpi"/>
+        <!--<splash src="res/screen/android/splash-land-hdpi.png" density="land-hdpi"/>
         <splash src="res/screen/android/splash-land-ldpi.png" density="land-ldpi"/>
         <splash src="res/screen/android/splash-land-mdpi.png" density="land-mdpi"/>
         <splash src="res/screen/android/splash-land-xhdpi.png" density="land-xhdpi"/>
         <splash src="res/screen/android/splash-port-hdpi.png" density="port-hdpi"/>
         <splash src="res/screen/android/splash-port-ldpi.png" density="port-ldpi"/>
         <splash src="res/screen/android/splash-port-mdpi.png" density="port-mdpi"/>
-        <splash src="res/screen/android/splash-port-xhdpi.png" density="port-xhdpi"/>
+        <splash src="res/screen/android/splash-port-xhdpi.png" density="port-xhdpi"/>-->
+    </platform>
+    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreenDelay" value="5000" />
+    <preference name="SplashMaintainAspectRatio" value="true|false" />
+    <platform name="android">
+            <splash src="res/drawable-hdpi/screen.png" density="hdpi"/>
+        <splash src="res/drawable-ldpi/screen.png" density="ldpi"/>
+        <splash src="res/drawable-mdpi/screen.png" density="mdpi"/>
+        <splash src="res/drawable-xhdpi/screen.png" density="xhdpi"/>
+        <splash src="res/drawable-xhdpi/screen.png" density="xxhdpi"/>
+        <splash src="res/drawable-xhdpi/screen.png" density="xxxhdpi"/> 
     </platform>
     <access origin="*" />
     <allow-intent href="http://*/*" />
@@ -45,10 +56,10 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
-    <preference name="SplashScreen" value="screen"/> 
+<!--<preference name="SplashScreen" value="screen"/> 
     <preference name="SplashScreenDelay" value="10000" />
     <preference name="SplashMaintainAspectRatio" value="true" />
     <preference name="SplashShowOnlyFirstTime" value="true" />
-    <preference name="SplashScreenSpinnerColor" value="white" />
+    <preference name="SplashScreenSpinnerColor" value="white" />-->
 
 </widget>
