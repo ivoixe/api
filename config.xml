@@ -5,7 +5,6 @@
       KANTAUR APP
     </description>
     <author email="ivonne@prismacm.com" href="http://app.kantaur.com">
-
     </author>
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
@@ -36,7 +35,7 @@
         <splash density="port-xxhdpi" src="www/res/screen/android/drawable-port-xxhdpi-screen.png" />
         <splash density="port-xxxhdpi" src="www/res/screen/android/drawable-port-xxxhdpi-screen.png" />
     </platform>
-    <splash src="www/res/screen/android/drawable-land-ldpi-screen.png" />
+    <!--<splash src="www/res/screen/android/drawable-land-ldpi-screen.png" />-->
     <platform name="ios">
         <icon height="57" platform="ios" src="www/res/icon/ios/icon.png" width="57" />
         <icon height="114" platform="ios" src="www/res/icon/ios/icon@2x.png" width="114" />
@@ -88,7 +87,7 @@
         <splash height="1920" platform="windows" src="www/res/screen/windows/SplashScreenPhone.scale-240.png" width="1152" />
     </platform>
     <preference name="AutoHideSplashScreen" value="true" />
-    <preference name="SplashScreenDelay" value="3000" />
+    <preference name="SplashScreenDelay" value="4000" />
 
     <access origin="*" />
     <allow-intent href="http://*/*" />
@@ -104,5 +103,5 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
-    <preference name="SplashScreen" value="splash" />
+    <!--<preference name="SplashScreen" value="splash" />-->
 </widget>
