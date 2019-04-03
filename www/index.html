@@ -68,6 +68,7 @@
        document.addEventListener("deviceready", onDeviceReady, false);
 
        function onDeviceReady(){
+           navigator.splashscreen.show();
            document.addEventListener("backbutton", function(){
                if(document.getElementById('#home')){
                    e.preventDefault();
