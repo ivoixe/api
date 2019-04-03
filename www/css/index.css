@@ -678,3 +678,7 @@ ons-progress-circular{
 .content-interactiva img{
     max-width: 100%;
 }
+
+.pregunta-content .content{
+    text-transform:uppercase;
+}
