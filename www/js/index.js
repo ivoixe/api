@@ -441,7 +441,7 @@ function dibuja(){
                    contenido += ' <div class="pregunta marco '+hidden+'" >' +
                        '                <div class="pregunta-content">' +
                        '                    <div class="content text-center">' +
-                       '                        <i class="fas fa-map-marker mark"><span>'+value.letra+'</span></i>' +
+                       '                        <i class="fas fa-map-marker mark"><span style="transform:uppercase;">'+value.letra+'</span></i>' +
                        '                          ' + value.titulo +
                        '                    </div>' +
                        '                </div>' +
