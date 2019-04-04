@@ -715,13 +715,19 @@ ons-progress-circular{
     font-size:18px;
 }
 
-.leftMenu i {
+.leftMenuBackground i {
     -webkit-text-stroke-color: #f4d3a9;
     -webkit-text-stroke-width: 1px;
     position: absolute;
     transform: translate(-50%,-50%);
     left: 50%;
     top: 50%;
+}
+
+.leftMenuBackground ~ p {
+    font-family: 'Rajdhani-Semibold';
+    font-size: 19px;
+    text-shadow: 3px 1px 2px #fff;
 }
 
 .leftMenuBackground {
