@@ -83,6 +83,7 @@
                    navigator.app.backHistory()
                }
            }, false);
+           carga_preguntas();
        }
 
 
@@ -97,17 +98,16 @@
            categorias();
            consejos();
            carga_seccion();
-           //interactua();
            if(page =="detalle.html"){
                 datas_detalle(null);
            }
            if(page =="kantrivia.html"){
-              // vaciar_juego();
-               vaciar_juego(); carga_preguntas();
-               dibuja();
+               carga_preguntas();
                var comprobacion = comprobar_preguntas();
                if(comprobacion==true){
                   page="resultado.html";
+               } else {
+                   dibuja(); 
                }
                var algo= $(document).find('.pregunta.marco').length;
 
@@ -117,12 +117,18 @@
                datos_resultado();
              //  console.log('compro res'+comprobacion);
                if(comprobacion == false){
+                   dibuja(); 
                    page="kantrivia.html";
                }
        }
           // var t= dibuja();
            // $(document).find('#preguntasContenido').html(t);
-
+			 
+           if (page == "kantrivia.html"){
+				document.getElementById("kantrivia").style.pointerEvents = "none";
+			} else{
+				document.getElementById("kantrivia").style.pointerEvents = "auto";
+			}
            var content = document.getElementById('content');
            var menu = document.getElementById('menu');
            content.load(page)
@@ -196,7 +202,7 @@
 
            <ons-list style="background: url('img/backgroundMenu.png');background-size:unset;">
 
-               <ons-list-item onclick="fn.load('home.html')" tappable>
+               <ons-list-item id="kantaur" onclick="fn.load('home.html')" tappable>
 
                    <div class="leftMenuBackground" style="background: url('img/redondo.png');background-size: contain;">
                        <i class="fas fa-home"></i>
@@ -204,7 +210,7 @@
                     <p>Kantaur</p>
 
                </ons-list-item>
-               <ons-list-item onclick="fn.load('entziklopedia.html')" tappable>
+               <ons-list-item id="entziklopedia" onclick="fn.load('entziklopedia.html')" tappable>
 
                    <div class="leftMenuBackground" style="background: url('img/redondo.png');background-size:contain;">
                        <i class="fas fa-book-open"></i>
@@ -213,27 +219,27 @@
 
                </ons-list-item>
 
-               <ons-list-item onclick="fn.load('hondakinak.html')" tappable>
+               <ons-list-item id="hondakinak" onclick="fn.load('hondakinak.html')" tappable>
                 <div class="leftMenuBackground" style="background: url('img/redondo.png');background-size:contain;">
                        <i class="fas fa-trash-alt"></i>
                    </div>
                    <p>Hondakinak</p>
                </ons-list-item>
-               <ons-list-item onclick="fn.load('aholkuak.html')" tappable>
+               <ons-list-item id="aholkuak" onclick="fn.load('aholkuak.html')" tappable>
                   <div class="leftMenuBackground" style="background: url('img/redondo.png');background-size:contain;">
                        <i class="far fa-comment-alt"></i>
                    </div>
                     <p>Aholkuak</p>
 
                </ons-list-item>
-               <ons-list-item onclick="fn.load('interactua.html')" tappable>
+               <ons-list-item id="elkarEragiten" onclick="fn.load('interactua.html')" tappable>
                    <div class="leftMenuBackground" style="background: url('img/redondo.png');background-size:contain;">
                        <i class="fa fa-undo"></i>
                    </div>
                     <p>Elkar eragiten du</p>
                </ons-list-item>
 
-               <ons-list-item onclick="fn.load('kantrivia.html');" tappable>
+               <ons-list-item id="kantrivia" onclick="fn.load('kantrivia.html');" tappable>
 
                    <div class="leftMenuBackground" style="background: url('img/redondo.png');background-size:contain;">
                        <i class="fab fa-yelp"></i>
