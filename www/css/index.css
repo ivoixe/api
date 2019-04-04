@@ -709,3 +709,28 @@ ons-progress-circular{
 .pregunta-content .content{
     text-transform:uppercase;
 }
+
+.leftMenu {
+    color: #174779;
+    font-size:18px;
+}
+
+.leftMenu i {
+    -webkit-text-stroke-color: #f4d3a9;
+    -webkit-text-stroke-width: 1px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+}
+
+.leftMenuBackground {
+    width: 35px;
+    height: 35px;
+    position: relative;
+    margin-right:5px;
+}
+
+#menu ons-list {
+    height:100%;
+}
