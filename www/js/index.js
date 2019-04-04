@@ -675,7 +675,7 @@ function datos_resultado(){
         suma_media =res_num;
     }
     var media = suma_media/num_partidas ;
-    var n = %" + (media.toFixed(1)) * 10;
+    var n = "%" + (media.toFixed(1)) * 10;
     var texto ="";
     var icono ="";
     $.ajax({
