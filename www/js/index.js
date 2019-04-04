@@ -578,21 +578,22 @@ function comprobar_preguntas(){
     var todas_cont = 0;
     var respondidas=0;
     $.each( JSON.parse(todas), function( key, value ) {
-
         var cada = localStorage.getItem("pregunta"+value.id);
-
         if(cada ){
             respondidas++;
         }
         todas_cont++;
     });
-    if(respondidas == todas_cont){
-
-       return true;
-    }else{
-      //  dibuja();
-        return false;
-    }
+    if (todas == null) {
+		carga_preguntas();
+		return false;
+	}else {	
+        if(respondidas == todas_cont){
+           return true;
+        }else{
+            return false;
+        }
+    }    
 
 }
 function last_ans(){
@@ -619,7 +620,7 @@ function last_ans(){
 function datos_resultado(){
     var todas = localStorage.getItem("todas_preguntas");
     var malas = 0;
-    var num_partidas = 1;
+    var num_partidas = 0;
     var buenas = 0;
     var historial =[];
     var respondidas=0;
@@ -673,6 +674,7 @@ function datos_resultado(){
 
     if(!historial){
         suma_media =res_num;
+        comparacion = res_num;
     }
     var media = suma_media/num_partidas ;
     var n = "%" + (media.toFixed(1)) * 10;
