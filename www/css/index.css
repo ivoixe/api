@@ -642,7 +642,7 @@ ons-select i{
     border:5px solid #9c9c9c;
     background:#dfdfdf;
 }
-.puntos_3 span {
+.puntos_3 span.numero {
     font-size: 35px;
 }
 
@@ -739,4 +739,8 @@ ons-progress-circular{
 
 #menu ons-list {
     height:100%;
+}
+
+#home .list-item__center {
+	background:unset;
 }
