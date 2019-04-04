@@ -642,6 +642,10 @@ ons-select i{
     border:5px solid #9c9c9c;
     background:#dfdfdf;
 }
+.puntos_3 span {
+    font-size: 35px;
+}
+
 .btn.berri {
     position: relative;
     font-family: 'Rajdhani-bold' !important;
