@@ -428,7 +428,6 @@ function dibuja(){
             var todas = localStorage.getItem("todas_preguntas");
             var index = 1;
             var hidden= '';
-
             $.each( JSON.parse(todas), function( key, value ) {
                 var pregunta_contestada = localStorage.getItem("pregunta"+value.id);
 
@@ -585,7 +584,6 @@ function comprobar_preguntas(){
         todas_cont++;
     });
     if (todas == null) {
-		carga_preguntas();
 		return false;
 	}else {	
         if(respondidas == todas_cont){
