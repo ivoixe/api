@@ -665,8 +665,8 @@ function datos_resultado(){
             }
             if(value > comparacion){
                 comparacion = value;
-                suma_media = suma_media + (value*1);
             }
+            suma_media = suma_media + (value*1);
             num_partidas ++;
         });
 
@@ -675,9 +675,7 @@ function datos_resultado(){
         suma_media =res_num;
     }
     var media = suma_media/num_partidas ;
-    var media = media * 100
-    var media = "%".media;
-    var n = media;
+    var n = %" + (media.toFixed(1)) * 10;
     var texto ="";
     var icono ="";
     $.ajax({
