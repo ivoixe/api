@@ -235,7 +235,7 @@
                    <div class="leftMenuBackground" style="background: url('img/redondo.png');background-size:contain;">
                        <i class="fa fa-undo"></i>
                    </div>
-                    <p>Elkar eragiten du</p>
+                    <p>Irudiak 3D-tan</p>
                </ons-list-item>
 
                <ons-list-item id="kantrivia" onclick="fn.load('kantrivia.html');" tappable>
@@ -276,9 +276,7 @@
            </div>
 
            <div class="center">
-
-
-
+               <img class="3dICon" onclick="fn.load('interactua.html')" style="width: 35px;height: 35px;float: right;margin-top: 15px;" class="img-responsive img-circle" src="img/3d-modeling-icon-6.png">
            </div>
 
        </ons-toolbar>
@@ -364,8 +362,9 @@
         <div id="main-enciclopedia-detalle" class="page__content ons-page-inner">
 
             <div class="titulo">
-                <h1><i class="fas fa-book-open"></i> ENTZIKLOPEDIA</h1>
-            </div>
+                <h1 onclick="fn.load('entziklopedia.html')"><i class="fas fa-book-open"></i> ENTZIKLOPEDIA</h1>
+                <p id="nombreCategoria"></p>
+	    </div>
             <div class="content-listado">
                 <div class="content-content text-center">
                     <h2><i class="fas fa-chevron-left left back "></i><span></span><i class="fas fa-chevron-right right next"></i></h2>
@@ -459,6 +458,7 @@
         <div id="main-enciclopedia-filtro" class="page__content ons-page-inner">
             <div class="titulo">
                 <h1 onclick="fn.load('entziklopedia.html')"><i class="fas fa-book-open"></i> ENTZIKLOPEDIA </h1>
+		    <p id="nombreCategoria"></p>
             </div>
             <div class="content-listado">
                 <div class="content-content">
@@ -496,7 +496,8 @@
         <div id="main-interactua" class="page__content ons-page-inner">
 
             <div class="titulo">
-                <h1><i class="fa  fa-undo"></i>ELKAR ERAGITEN DU</h1>
+                <h1><i class="fa fa-undo"></i>IRUDIAK 3D-TAN</h1>
+                <p style="font-size: 15px;margin-bottom: 0px;">Espezie bat aukeratu eta irudia mugitu</p>
             </div>
 
             <div class="content-listado">
