@@ -213,7 +213,7 @@ h1 {
      padding-top: 0px;
      padding-left:30px;
      padding-right:30px;
-     padding-bottom:30px;
+     padding-bottom:10px;
      color:#135ca5;
     font-family: 'Rajdhani-bold';
     text-align: center;
@@ -743,4 +743,10 @@ ons-progress-circular{
 
 #home .list-item__center {
 	background:unset;
+}
+
+#nombreCategoria {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    text-transform: uppercase;
 }
