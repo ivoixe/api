@@ -271,7 +271,8 @@ function datas(id,filtro,direccion){
         dataType: "json",
         success: function(resp){
             $('#list-filtro').append(resp.listado);
-
+	    $('#nombreCategoria').html(resp.padre);
+		
         },
         error: function(){
 
@@ -289,7 +290,7 @@ function datas_detalle(direccion){
         data: ({filtro:filtro,direccion:direccion}),
         dataType: "json",
         success: function(resp){
-
+	$('#nombreCategoria').html(resp.padre);
             $(document).find('.zoom a').colorbox({
                 width:'100%',
                 height:'100%',
